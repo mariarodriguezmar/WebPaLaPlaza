@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+  box-sizing: border-box;
+    margin: 0;
+  padding: 0;
+}
+:root{
+    /*paleta colores*/
+    --verde-pino: #1e3a25;
+    --verde-militar: #383f1f;
+    --verde-oliva-oscuro: #646e35;
+    --verde-oliva-medio: #76825d;
+    --verde-oliva-claro: #8d9e6e;
+    --cafe: #6c3f2f;
+    --crema: #d8c5a5;
+    --blanco-hueso: #f1f0ec;
+    --amarillo: #f5d45c;
+    --naranja: #f18b29;
+    --blanco: #ffffff;
+    /*colores textos*/
+    --texto-parrafos: var(--crema);
+    --textos-apoyo: var(--amarillo);
+    --textos-frases: var(--crema);
+    --titulo-principales: var(--amarillo);
+    --titulo-acento1: var(--naranja);
+    --titulo-acento2: var(--crema);
+    /*colores fondos*/
+    --fondo1: var(--verde-militar);
+    --fondo2: var(--verde-oliva-oscuro);
+    /*tamaño fuentes*/
+    --tamaño-xxs:0.75rem; 
+    --tamaño-xs:1rem; 
+    --tamaño-s: 2.5rem;
+    --tamaño-m: 3rem;
+    --tamaño-l: 4rem;
+    --tamaño-xl: 5rem;
+    --tamaño-xxl: 7.5rem;
+
+    --tamaño-titulos-principales: var(--tamaño-xxl);
+    --tamaño-titulos-acento1: var(--tamaño-l);
+    --tamaño-titulos-acento2: var(--tamaño-m);
+    --tamaño-titulos-acento3: var(--tamaño-s);
+    --tamaño-parrafos: var(--tamaño-xs);
+    --tamaño-texto-apoyo: var(--tamaño-xxs);
+    --tamaño-botones: var(--tamaño-s);
+    --tamaño-menu: var(--tamaño-s);
+    --tamaño-frases: var(--tamaño-xl);
+
+    /*tamaño bordes*/
+    --borde-s: 10px ;
+    --borde-m: 20px ;
+    --borde-l: 40px ;
+}
