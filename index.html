@@ -7,26 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>  <!-- Oculto -->
-        <div class="texto apoyo horizontal">
+    <div class="menu">  <!-- Botón menu -->
+        <button onclick="abrirMenu()" baskerville= "Menú">
+            <div class="menu-fondo">
+                <img src="IMG/MENÚ.png" alt="">
+            </div>
+            <div class="menu-arriba">
+                <img src="IMG/HONDAS.png" alt="menu">
+                <span>Menú</span>
+            </div>
+        </button>
+    </div>
+    <header id="header">  <!-- Oculto -->
+        <div class="menu">  <!-- Botón menú cerrar -->
+            <button onclick="cerrarMenu()" baskerville= "Cerrar">
+            <div class="menu-fondo">
+                <img src="IMG/MENÚ.png" alt="">
+            </div>
+            <div class="menu-arriba">
+                <img src="IMG/HONDAS.png" alt="menu">
+                <span>Cerrar</span>
+            </div>
+        </button>
+        </div>
+        <div class="texto-apoyo-horizontal">
             <h2>Espacio vivo</h2>
             <h2>Rituales que construyen comunidad</h2>
             <h2>Lugar de encuentro</h2>
         </div>
-        <div>
-            <div class="texto apoyo vertical">
+        <div class="menu-cuerpo">
+            <div class="texto-apoyo-vertical-superior">
                     <h2>Relaciones que van mas alla de un intrecambio comercial</h2>
             </div>
-            <div class="titulo secundario">
+            <div class="titulo-secundario">
                 <h1>Descubre</h1>
-                <div>
+                <div class="subtitulo-lineas">
                     <hr>
                     <h2>La plaza</h2>
                     <hr>
                 </div>
             </div>
             <div class="linea-vertical"></div>
-            <div>
+            <div class="menu-nav">
                 <nav>
                     <ul>
                         <li><a href="#websodios">Websodios</a></li>
@@ -38,19 +60,12 @@
                  </nav>
             </div>
         </div>
-        <div class="texto apoyo horizontal">
+        <div class="texto-apoyo-horizontal-inferior">
             <h2>Miradas</h2>
             <h2>Historias que habitan la plaza</h2>
             <h2>Archivo colectivo</h2>
         </div>
     </header>
-
-    <div class="menu">  <!-- CONTAINER DEL MENÚ -->
-        <a href="#header">
-            <img src="" alt="menu">
-            <h8>Menú</h8> 
-        </a>
-    </div>
 
     <div class="container">
         <div class="background">
@@ -62,7 +77,7 @@
             <div class="capa3"></div>
         </div>
         <section class="intro">
-            <div class="Titulo secundario">
+            <div class="titulo-secundario">
                 <h1>Pa'la plaza</h1>
                 <div>
                     <hr>
@@ -81,7 +96,7 @@
                     Te invitamos a redescubrir este lugar, comprender sus dinámicas y reconocer cómo, en medio de lo cotidiano, se sigue construyendo identidad, encuentro y memoria colectiva.
                 </p>
             </div>
-            <div class="texto apoyo horizontal">
+            <div class="texto-apoyo-horizontal">
                 <h2>Espacio vivo</h2>
                 <h2>Rituales que construyen comunidad</h2>
                 <h2>Memoria colectiva</h2>
@@ -91,7 +106,7 @@
 
     <section class="historia">
         <div>
-            <div class="texto apoyo horizontal">
+            <div class="texto-apoyo-horizontal">
                 <h2>Tejido económico</h2>
                 <h2>Identidad sontarrosana</h2>
             </div>
@@ -100,14 +115,14 @@
                     <img src="" alt="">
                     <img src="" alt="">
                 </div>
-                <div class="texto apoyo horizontal">
+                <div class="texto-apoyo-horizontal">
                     <h2>Poner créditos de las fotosss</h2>
                     <h2>Patrimonio arquitectónico, historico y cultural</h2>
                 </div>
             </div>
         </div>
         <div>
-            <div class="Titulo secundario">
+            <div class="titulo-secundario">
                 <h1>HISTORIA</h1>
                 <div>
                     <hr>
@@ -132,7 +147,7 @@
     <div class="container">
         <div class="background">
             <div class="frase">
-                <h3>“Somos una familia”</h3>
+                <span>“Somos una familia”</span>
             </div>
             <div class="capa1"></div>
             <div class="capa2"></div>
@@ -141,7 +156,7 @@
             <div>
                 <h2>Historias y relaciones que tejen la plaza.</h2>
             </div>
-            <div class="titulo cta">
+            <div class="titulo-cta">
                 <div>
                     <h4>ADENTRÉMONOS</h4>
                 </div>
@@ -151,7 +166,7 @@
                         <h6>en la</h6>
                     </div>
                     <div>
-                        <h7>PLAZA</h7>
+                        <h3>PLAZA</h3>
                     </div>
                 </div>
             </div>
@@ -173,24 +188,22 @@
             <img src="" alt="logo pa'la plaza">
             <h2>Un proyecto desarrollado para incentivar la mirada contemplativa a la plaza Los fundadores de Santa Rosa de Caval</h2>
         </div>
-        <div>
-            <div>
-                <h8>DESCUBRE</h8> 
-            </div>
-            <div>
+        <div class="footer-nav">
+            <div class="footer-nav-titulo"> DESCUBRE</div>
+            <div class="footer-nav-columnas">
                 <div>
-                    <h2>Websodios</h2>
-                    <h2>Mapa de memoria</h2>
-                    <h2>Habitar la plaza</h2>
+                    <a href="#websodios">Websodios</a>
+                    <a href="#mapamemoria">Mapa de memoria</a>
+                    <a href="#habitar">Habitar la plaza</a>
                 </div>
                 <div>
-                    <h2>Crear postales</h2>
-                    <h2>Archivo vivo</h2>
+                    <a href="#postales">Crear postales</a>
+                    <a href="#archivovivo">Archivo vivo</a>
                 </div>
             </div>
         </div>
     </div>
-    <hr id="linea footer">
+    <hr id="linea-footer">
     <div>
         <h2>Por estudiantes de sexto semestre de diseño crossmedia</h2>
     </div>
