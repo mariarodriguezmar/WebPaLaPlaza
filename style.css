@@ -19,12 +19,12 @@
     --naranja: #f18b29;
     --blanco: #ffffff;
     /*colores textos*/
-    --texto-parrafos: var(--crema);
-    --textos-apoyo: var(--amarillo);
-    --textos-frases: var(--crema);
-    --titulo-principales: var(--amarillo);
-    --titulo-acento1: var(--naranja);
-    --titulo-acento2: var(--crema);
+    --color-texto-parrafos: var(--crema);
+    --color-texto-apoyo: var(--amarillo);
+    --color-texto-frases: var(--crema);
+    --color-titulo-principales: var(--amarillo);
+    --color-titulo-acento1: var(--naranja);
+    --color-titulo-acento2: var(--crema);
     /*colores fondos*/
     --fondo1: var(--verde-militar);
     --fondo2: var(--verde-oliva-oscuro);
@@ -44,11 +44,66 @@
     --tamaño-parrafos: var(--tamaño-xs);
     --tamaño-texto-apoyo: var(--tamaño-xxs);
     --tamaño-botones: var(--tamaño-s);
-    --tamaño-menu: var(--tamaño-s);
+    --tamaño-menu: var(--tamaño-xs);
     --tamaño-frases: var(--tamaño-xl);
 
     /*tamaño bordes*/
     --borde-s: 10px ;
     --borde-m: 20px ;
     --borde-l: 40px ;
+
+    --fuente-titulos: baskerville, serif;
+    --fuente-secundarios:;
+    --fuente-parrafos: inter, sans-serif;
+
+}
+
+.menu {
+  position: fixed;
+  top:0;
+  right: 0;
+  z-index: 900;
+  display: flex;
+  justify-content: left;
+}
+
+.menu-arriba {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-5%, -48%);
+}
+.menu-arriba img{
+  width: 75%;
+  height: auto;
+  margin-bottom: 4px; 
+}
+span{
+  font-family: var(--fuente-titulos);
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--crema);
+}
+
+.menu button {
+  position: relative; 
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.menu-abrir button:hover {
+  
+}
+.menu-fondo img {
+  display: block;
+  width: 8rem; 
+  height: auto;
 }
