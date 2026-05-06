@@ -24,27 +24,28 @@
     --color-texto-frases: var(--crema);
     --color-titulo-principales: var(--amarillo);
     --color-titulo-acento1: var(--naranja);
-    --color-titulo-acento2: var(--crema);
+    --color-titulo-acento2: var(--amarillo);
+    --color-titulo-acento3: var(--crema);
     /*colores fondos*/
     --fondo1: var(--verde-militar);
     --fondo2: var(--verde-oliva-oscuro);
     /*tamaño fuentes*/
-    --tamaño-xxs:0.75rem; 
-    --tamaño-xs:1rem; 
-    --tamaño-s: 2.5rem;
-    --tamaño-m: 3rem;
-    --tamaño-l: 4rem;
-    --tamaño-xl: 5rem;
-    --tamaño-xxl: 7.5rem;
+    --tamaño-xxs:0.70rem; /*11.2*/
+    --tamaño-xs:1rem; /*16*/
+    --tamaño-s: 2.5rem; /*40*/
+    --tamaño-m: 3rem;/*48*/
+    --tamaño-l: 4rem; /**64*/
+    --tamaño-xl: 5rem;/*80*/
+    --tamaño-xxl: 7.5rem; /*120*/
 
     --tamaño-titulos-principales: var(--tamaño-xxl);
-    --tamaño-titulos-acento1: var(--tamaño-l);
-    --tamaño-titulos-acento2: var(--tamaño-m);
-    --tamaño-titulos-acento3: var(--tamaño-s);
+    --tamaño-titulos-acento1: var(--tamaño-xl);
+    --tamaño-titulos-acento2: var(--tamaño-l);
+    --tamaño-titulos-acento3: var(--tamaño-m);
     --tamaño-parrafos: var(--tamaño-xs);
     --tamaño-texto-apoyo: var(--tamaño-xxs);
     --tamaño-botones: var(--tamaño-s);
-    --tamaño-menu: var(--tamaño-xs);
+    --tamaño-menu: var(--tamaño-l);
     --tamaño-frases: var(--tamaño-xl);
 
     /*tamaño bordes*/
@@ -52,12 +53,14 @@
     --borde-m: 20px ;
     --borde-l: 40px ;
 
-    --fuente-titulos: baskerville, serif;
+    --fuente-titulos: baskervville, serif;
     --fuente-secundarios:;
     --fuente-parrafos: inter, sans-serif;
 
+    --espaciado-texto-apoyo: 15%;
 }
 
+/* DISEÑO BOTON MENÚ*/
 .menu {
   position: fixed;
   top:0;
@@ -106,4 +109,147 @@ span{
   display: block;
   width: 8rem; 
   height: auto;
+}
+
+/*diseño tipografías*/
+h1{
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-titulos-principales);
+}
+h2{
+  font-family: var(--fuente-parrafos);
+  font-size: var(--tamaño-texto-apoyo);
+  letter-spacing: var(--espaciado-texto-apoyo);
+  font-weight: 300;
+  color:var(--amarillo);
+}
+h3{
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-titulos-acento1);
+  color: var(--color-titulo-acento2);
+}
+h4{
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-titulos-acento2);
+  color: var(--color-titulo-acento2);
+}
+h5{
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-titulos-acento2);
+  color: var(--color-titulo-acento3);
+}
+h6{
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-titulos-acento3);
+  color: var(--color-titulo-acento3);
+}
+
+
+/*DISEÑÓ contenido menú*/
+
+.contenido-menu{
+  display: flex;
+  flex-direction: column; 
+  height: 100vh;
+  justify-content: space-between;
+  background-image: url(IMG/FONDOMENÚ.png);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.texto-apoyo-horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 6rem;
+    font-family: var(--fuente-parrafos);
+    font-size: var(--tamaño-texto-apoyo);
+    letter-spacing: var(--espaciado-texto-apoyo);
+    font-weight: regular;
+    color:var(--amarillo);
+    height: 15%;
+    gap: 10rem;
+}
+.menu-cuerpo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 6rem;
+  height: 70%;
+
+}
+.texto-apoyo-vertical-izquierda{
+  position: absolute; 
+  left: 3rem;
+  top: 50%;
+  transform: rotate(-90deg) translate(-70%, 0);
+  transform-origin: left top;
+  white-space: nowrap;
+} 
+
+.titulo-secundario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 6rem;
+}
+.titulo-secundario h1{
+  color: var(--color-titulo-acento1);
+}
+.subtitulo-lineas{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+hr{
+  border: none;
+  border-top: 0.5px solid var(--amarillo);
+   width: 50px;
+}
+.linea-vertical {
+  width: 0.5px;
+  height: 55vh;
+  background-color: var(--amarillo);
+}
+.menu-nav{
+  display: flex;
+  flex-direction: column;
+}
+.menu-nav a{
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-menu);
+  color: var(--color-titulo-acento3);
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+ display: flex;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+.menu-nav ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+header {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  opacity: 0;
+  pointer-events: none; 
+
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+header.abierto {
+  opacity: 1;
+  pointer-events: auto;
 }
