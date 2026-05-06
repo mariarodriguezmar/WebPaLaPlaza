@@ -31,7 +31,7 @@
     --fondo2: var(--verde-oliva-oscuro);
     /*tamaño fuentes*/
     --tamaño-xxs:0.70rem; /*11.2*/
-    --tamaño-xs:1rem; /*16*/
+    --tamaño-xs:0.9rem; /*16*/
     --tamaño-s: 2.5rem; /*40*/
     --tamaño-m: 3rem;/*48*/
     --tamaño-l: 4rem; /**64*/
@@ -143,7 +143,13 @@ h6{
   font-size: var(--tamaño-titulos-acento3);
   color: var(--color-titulo-acento3);
 }
-
+p{
+  font-family: var(--fuente-parrafos);
+  font-size: var(--tamaño-parrafos);
+  color: var(--color-texto-parrafos);
+  font-weight: 300;
+  text-align: justify;
+}
 
 /*DISEÑÓ contenido menú*/
 
@@ -164,14 +170,13 @@ h6{
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    padding: 3rem 6rem;
+    padding: 3rem 1rem;
     font-family: var(--fuente-parrafos);
     font-size: var(--tamaño-texto-apoyo);
     letter-spacing: var(--espaciado-texto-apoyo);
-    font-weight: regular;
     color:var(--amarillo);
     height: 15%;
-    gap: 10rem;
+    gap: 9rem;
 }
 .menu-cuerpo{
   display: flex;
@@ -188,6 +193,9 @@ h6{
   transform: rotate(-90deg) translate(-70%, 0);
   transform-origin: left top;
   white-space: nowrap;
+  gap: 6rem;
+  display: flex;
+  flex-direction: row;
 } 
 
 .titulo-secundario{
@@ -195,7 +203,7 @@ h6{
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin: 6rem;
+  margin: 0 6rem;
 }
 .titulo-secundario h1{
   color: var(--color-titulo-acento1);
@@ -253,3 +261,126 @@ header.abierto {
   opacity: 1;
   pointer-events: auto;
 }
+
+
+/*Diseño intro*/
+.hero-container{
+  background-image: url(IMG/img1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  height: 250vh;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 15rem;
+  
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(IMG/FONDO-INTRO.png);
+  position: absolute;
+  right: 0; 
+  top: 150%;
+  transform: translateY(-50%); 
+  width: 58%; 
+  height: 90%;
+  gap: 1rem;
+  padding-top: 5rem;
+}
+.titulo-secundario h1{
+  color: var(--color-titulo-acento2);
+}
+.titulo-secundario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+}
+.text-intro{
+  padding: 2rem 11rem;
+}
+
+
+/*Diseño historia*/
+.historia{
+  display: flex;
+  flex-direction: row;
+  background-image: url(IMG/FONDO-DEGRADADO.png);
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+  position: absolute; 
+  top: 220%;
+  justify-content: center;
+  align-items: center;
+}
+.apartado-imagen{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 40%;
+  padding: 1rem;
+}
+.texto-apoyo-vertical-izquierda-historia{
+  position: absolute; 
+  left: 3rem;
+  top: 40%;
+  transform: rotate(-90deg) translate(-70%, 0);
+  transform-origin: left top;
+  white-space: nowrap;
+  gap: 6rem;
+  display: flex;
+  flex-direction: row;
+} 
+.imagen-texto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.alinear-iz{
+  text-align: left;
+}
+.alinera-der{
+  text-align: right;
+}
+.img_scroll img{
+  margin-top: 5rem;
+  border-radius: var(--borde-s);
+}
+.apartado-historia{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 50%;
+  padding:  2rem;
+}
+.titulo-secundario-historia{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.titulo-secundario-historia h1{
+  color: var(--color-titulo-acento2);
+}
+.text-historia{
+  padding: 0 3rem;
+}
+
