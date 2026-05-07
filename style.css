@@ -320,8 +320,8 @@ header.abierto {
   background-size: cover;
   background-position: center;
   height: 120vh;
-  position: absolute; 
-  top: 220%;
+  position: relative;
+  margin-top: -325px;
   justify-content: center;
   align-items: center;
   z-index: 50;
@@ -390,15 +390,16 @@ header.abierto {
   display: flex;
   flex-direction: column;
   background-image: url(IMG/plaza.jpg);
-  background-size: 130%;
+  background-size: 140%;
   background-position: 55% 7%;
   width: 100%;
-  height: 170vh;
-  position: absolute; 
-  top: 315%;
+  height: 200vh;
   justify-content: center;
   align-items: center;
   gap: 6rem;
+  position: relative; 
+  margin-top: -240px;
+  background-repeat: no-repeat;
 }
 
 .frase{
@@ -426,7 +427,7 @@ header.abierto {
   background-image: url(IMG/FONO-CTA.png);
   width: 100%;
   height: 41%;
-  margin-top: 22%;
+  margin-top: 20%;
 }
 
 .titulo-cta{
