@@ -324,6 +324,7 @@ header.abierto {
   top: 220%;
   justify-content: center;
   align-items: center;
+  z-index: 50;
 }
 .apartado-imagen{
   display: flex;
@@ -341,7 +342,7 @@ header.abierto {
   transform: rotate(-90deg) translate(-70%, 0);
   transform-origin: left top;
   white-space: nowrap;
-  gap: 6rem;
+  gap: 10rem;
   display: flex;
   flex-direction: row;
 } 
@@ -350,12 +351,11 @@ header.abierto {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
 }
 .alinear-iz{
   text-align: left;
 }
-.alinera-der{
+.alinear-der{
   text-align: right;
 }
 .img_scroll img{
@@ -384,3 +384,141 @@ header.abierto {
   padding: 0 3rem;
 }
 
+/*diseño cierre cta*/
+
+.container{
+  display: flex;
+  flex-direction: column;
+  background-image: url(IMG/plaza.jpg);
+  background-size: 130%;
+  background-position: 55% 7%;
+  width: 100%;
+  height: 170vh;
+  position: absolute; 
+  top: 315%;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.frase{
+  display: flex;
+  justify-content: center; 
+  position: absolute;
+  left: 0;
+  top: 26%;
+  background-color: rgba(100, 110, 53, 0.56);
+  width: 60%;
+  height: 10%;
+  border-radius: 0  var(--borde-m) var(--borde-m) 0;
+}
+.frase span{
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-frases);
+  color: var(--color-texto-frases);
+}
+
+.CTA{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(IMG/FONO-CTA.png);
+  width: 100%;
+  height: 41%;
+  margin-top: 22%;
+}
+
+.titulo-cta{
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+height: 35%;
+}
+.txt-principal {
+grid-area: 2 / 2 / 3 / 6; 
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.txt-apoyo {
+grid-area: 3 / 2 / 5 / 6; 
+display: flex;
+flex-direction: row; 
+justify-content: center;
+gap: 1rem;
+height: 54%
+}
+.txt-apoyo-vertical {
+  grid-area: 3 / 2 / 4 / 4;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: flex-end;
+position: relative;
+}
+.txt-final { 
+  grid-area: 3 / 4 / 5 / 6; 
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+
+.txt-apoyo1 {
+  position: relative;
+  z-index: 2;
+}
+
+.txt-apoyo2 {
+  position: relative;
+  top: -25px; 
+  z-index: 1;
+}
+.texto-apoyo-horizontal-frases-iz{
+  display: flex;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+  padding: 0 3rem;
+}
+.texto-apoyo-horizontal-frases-der{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 20%;
+  width: 100%;
+  padding: 0 3rem;
+}
+.txt-boton{
+  
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: row;
+  background-color: var(--verde-oliva-oscuro);
+  width: 53vh;
+  height: 60%;
+  border-radius: 0  var(--borde-m) var(--borde-m) 0;
+}
+.boton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transform: translateY(4rem);
+}
+.boton img{
+  transform: translateX(1.2rem);
+  z-index: 99;
+}
+.boton span{
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-botones);
+  color: var(--color-texto-frases);
+  margin-left: 4%;
+}
+.titulo-cta, .texto-apoyo-horizontal-frases-iz, .texto-apoyo-horizontal-frases-der {
+  transform: translateY(6rem);
+}
