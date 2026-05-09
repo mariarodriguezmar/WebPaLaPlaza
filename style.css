@@ -405,9 +405,10 @@ header.abierto {
 .container{
   display: flex;
   flex-direction: column;
-  background-image: url(IMG/plaza.jpg);
+  /*background-image: url(IMG/plaza.jpg);
   background-size: 140%;
   background-position: 55% 7%;
+  background-repeat: no-repeat;*/
   width: 100%;
   height: 190vh;
   justify-content: center;
@@ -416,6 +417,8 @@ header.abierto {
   position: relative; 
   margin-top: -240px;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
 .frase{
@@ -426,8 +429,9 @@ header.abierto {
   top: 26%;
   background-color: rgba(100, 110, 53, 0.56);
   width: 60%;
-  height: 10%;
+  height: 8%;
   border-radius: 0  var(--borde-m) var(--borde-m) 0;
+  z-index: 10;
 }
 .frase span{
   font-family: var(--fuente-titulos);
@@ -444,6 +448,7 @@ header.abierto {
   width: 100%;
   height: 41%;
   margin-top: 20%;
+  z-index: 10;
 }
 
 .titulo-cta{
@@ -655,4 +660,18 @@ footer{
 .capa4{
   background-image:url(IMG/IMG-1.1.png);
   z-index: 4;
+}
+
+/*parallax 2*/
+
+.capa-cta{
+  position: absolute;
+  inset: 0;
+  bottom: -50%;
+ background-image: url(IMG/plaza.jpg);
+  background-size: 150%;
+  background-position: 55% 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  will-change: transform;
 }

@@ -39,3 +39,13 @@ function parallaxScroll(){
   `translateY(-${scrolled * 0.4}px)`;
 
 }
+
+/*parallax 2*/
+window.addEventListener("scroll", function () {
+
+  const scroll = window.scrollY;
+
+  document.querySelector(".capa-cta").style.transform =
+    `translateY(${scroll * -0.12}px)`;
+
+});
