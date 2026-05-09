@@ -530,6 +530,7 @@ position: relative;
   align-items: center;
   flex-direction: row;
   transform: translateY(4rem);
+  text-decoration: none;
 }
 .boton img{
   transform: translateX(1.2rem);
@@ -667,10 +668,12 @@ footer{
 .capa-cta{
   position: absolute;
   inset: 0;
-  bottom: -50%;
+  bottom: -50%; /*movimiento para arriba*/
+  /*top: -30%; movimiento para abajo*/
  background-image: url(IMG/plaza.jpg);
   background-size: 150%;
-  background-position: 55% 50%;
+  /*background-position: 55% 50%; movimiento para abajo*/
+  background-position: 52% 50%; /*movimiento para arriba*/
   background-repeat: no-repeat;
   z-index: 1;
   will-change: transform;
