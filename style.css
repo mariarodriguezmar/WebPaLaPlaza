@@ -30,7 +30,7 @@
     --fondo1: var(--verde-militar);
     --fondo2: var(--verde-oliva-oscuro);
     /*tamaño fuentes*/
-    --tamaño-xxs:0.70rem; /*11.2*/
+    --tamaño-xxs:0.75rem; /*12*/
     --tamaño-xs:0.9rem; /*16*/
     --tamaño-s: 2.5rem; /*40*/
     --tamaño-m: 3rem;/*48*/
@@ -286,13 +286,13 @@ header.abierto {
   z-index: 10;
 }
 
-.logo {
+.hero-intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 15rem;
+  margin-top: 13rem;
   
 }
 .intro{
@@ -678,3 +678,75 @@ footer{
   z-index: 1;
   will-change: transform;
 }
+
+/*--------------------------------------------------------------------
+style-interna webssodios*/
+
+.menu-container{
+  position: fixed;
+  z-index: 900;
+  display: flex;
+  justify-content: space-between;
+}
+.logo-fijo{
+  margin: 2rem;
+}
+
+.hero-container-websodios{
+   position: relative;
+  overflow: hidden;
+  height: 150vh;
+  padding-bottom: 30rem;
+}
+.intro-interna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+  
+}
+
+.titulo-principal{
+  display: flex;
+  flex-direction: column;
+}
+.txt-principal-intro h1{ 
+  color: var(--color-titulo-principales);
+}
+.txt-apoyo-intro{
+   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(-54px);
+  margin-left: 7%;
+  margin-bottom: -2%;
+}
+.txt-rotado-vertical-intro{
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -60px;
+  top: 31%;
+  transform-origin: center;
+}
+.txt-medio-intro h1{
+  display: flex;
+  justify-content: center;
+  color: var(--color-titulo-acento1);
+}
+.txt-apoyo-iz-intro{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.txt-apoyo-iz-intro h6{
+  transform: translatey(19px);
+}
+.txt-apoyo-iz-intro h5{
+  color: var(--color-titulo-acento2);
+}
+
