@@ -19,7 +19,7 @@ document.addEventListener('keydown', function (e) {
 
 
 
-/*Parallax intro*/
+/*Parallax home*/
 window.addEventListener("scroll", parallaxScroll);
 
 function parallaxScroll(){
@@ -40,7 +40,7 @@ function parallaxScroll(){
 
 }
 
-/*parallax 2*/
+/*parallax cta home*/
 window.addEventListener("scroll", function () {
 
   const scroll = window.scrollY;
@@ -49,3 +49,16 @@ window.addEventListener("scroll", function () {
     `translateY(${scroll * -0.12}px)`;
 
 });
+
+/*parallax cta websodios*/
+window.addEventListener("scroll", function () {
+
+  const scroll = window.scrollY;
+
+  document.querySelector(".capa-cta-websodios").style.transform =
+    `translateY(${scroll * -0.12}px)`;
+
+});
+
+
+
