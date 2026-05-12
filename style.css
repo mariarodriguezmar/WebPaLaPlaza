@@ -54,7 +54,7 @@
     --borde-l: 40px ;
 
     --fuente-titulos: baskervville, serif;
-    --fuente-secundarios:;
+    --fuente-secundarios:inter, sans-serif;
     --fuente-parrafos: inter, sans-serif;
 
     --espaciado-texto-apoyo: 15%;
@@ -102,9 +102,7 @@ span{
   background: none;
   cursor: pointer;
 }
-.menu-abrir button:hover {
-  
-}
+
 .menu-fondo img {
   display: block;
   width: 8rem; 
@@ -410,7 +408,7 @@ header.abierto {
   background-position: 55% 7%;
   background-repeat: no-repeat;*/
   width: 100%;
-  height: 190vh;
+  height: 180vh;
   justify-content: center;
   align-items: center;
   gap: 6rem;
@@ -446,7 +444,7 @@ header.abierto {
   justify-content: center;
   background-image: url(IMG/FONO-CTA.png);
   width: 100%;
-  height: 41%;
+  height: 35%;
   margin-top: 20%;
   z-index: 10;
 }
@@ -457,7 +455,8 @@ grid-template-columns: repeat(6, 1fr);
 grid-template-rows: repeat(2, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
-height: 35%;
+height: 30%;
+transform: translateY(4rem);
 }
 .txt-principal {
 grid-area: 2 / 2 / 3 / 6; 
@@ -511,7 +510,7 @@ position: relative;
   justify-content: flex-end;
   height: 20%;
   width: 100%;
-  padding: 0 3rem;
+  padding: 3.5rem 3rem;
 }
 .txt-boton{
   
@@ -529,7 +528,7 @@ position: relative;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  transform: translateY(4rem);
+  transform: translateY(3.5rem);
   text-decoration: none;
 }
 .boton img{
@@ -542,7 +541,7 @@ position: relative;
   color: var(--color-texto-frases);
   margin-left: 4%;
 }
-.titulo-cta, .texto-apoyo-horizontal-frases-iz, .texto-apoyo-horizontal-frases-der {
+.texto-apoyo-horizontal-frases-iz, .texto-apoyo-horizontal-frases-der {
   transform: translateY(6rem);
 }
 
@@ -695,9 +694,9 @@ style-interna webssodios*/
 .hero-container-websodios{
    position: relative;
   overflow: hidden;
-  height: 150vh;
-  padding-bottom: 30rem;
+  height: 140vh;
 }
+
 .intro-interna {
   display: flex;
   flex-direction: column;
@@ -750,3 +749,142 @@ style-interna webssodios*/
   color: var(--color-titulo-acento2);
 }
 
+/* contenido websodios*/
+.websodios{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(IMG/FONDO-LINEA.png);
+  background-position: 0 50%;
+  height: 100vh;
+  position: relative;
+   z-index: 1000;
+}
+.titulo-version-horizontal{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem 10rem;
+  justify-content: center;
+}
+.titulo-version-horizontal h1{
+color: var(--color-titulo-principales);
+}
+.color-web {
+  color: var(--color-titulo-acento3);
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamaño-titulos-principales); 
+}
+/*contenedor de websodios*/
+
+.contenedor-videos{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 2rem;
+  padding: 1rem 4rem;
+  margin-left: 4rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  
+}
+video{
+  display:flex;
+  width: 400px;
+  width: 100%;
+  display: block;
+}
+.episodio{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  position: relative;
+
+  flex: 0 0 48%;
+
+  overflow: hidden;
+
+  scroll-snap-align: start;
+
+  border-radius: var(--borde-s);
+  transition: transform 0.4s ease;
+}
+.episodio:hover{
+  transform: scale(1.02);
+}
+
+/* PANEL OCULTO */
+.info-episodio{
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(IMG/FONDOMENÚ.png);
+  background-position: center;
+  width: 85%;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  padding: 2rem;
+}
+.info-episodio h6{
+display: flex;
+  margin: 1rem 0;
+}
+
+.texto-intro-websodios{
+  display: flex;
+  margin: 3rem 2rem 0rem;
+}
+
+/* APARECE AL HACER HOVER */
+.episodio:hover .info-episodio{
+  opacity: 1;
+}
+
+/*Parallax intro*/
+.parallax-intro-websodios{
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  z-index: 1;
+}
+.capaw{
+  position: absolute;
+  left: -10;
+  width: 100%;
+  height: 100%;
+  background-size: 135%;
+  background-position: 20% 50%;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+.capaw1{
+  background-image: url(IMG/INTROW.jpg);
+  z-index: 1;
+}
+
+/*parallax cta*/
+
+.capa-cta-websodios{
+  position: absolute;
+  inset: 0;
+  bottom: -50%; /*movimiento para arriba*/
+  /*top: -30%; movimiento para abajo*/
+  background-image: url(IMG/CTA2.jpg);
+  background-size: 150%;
+  /*background-position: 55% 50%; movimiento para abajo*/
+  background-position: 52% 50%; /*movimiento para arriba*/
+  background-repeat: no-repeat;
+  z-index: 1;
+  will-change: transform;
+}
