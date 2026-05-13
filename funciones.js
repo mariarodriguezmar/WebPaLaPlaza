@@ -60,5 +60,20 @@ window.addEventListener("scroll", function () {
 
 });
 
+/*Parallax home*/
+window.addEventListener("scroll", parallaxScroll);
 
+function parallaxScroll(){
 
+  const scrolled = window.scrollY;
+
+  document.querySelector(".capaw").style.transform =
+  `translateY(-${scrolled * 0.08}px)`;
+
+  document.querySelector(".capaw1").style.transform =
+  `translateY(-${scrolled * 0.16}px)`;
+
+  document.querySelector(".capaw2").style.transform =
+  `translateY(-${scrolled * 0.28}px)`;
+
+}

@@ -703,7 +703,7 @@ style-interna webssodios*/
   justify-content: center;
   align-items: center;
   margin-top: 15rem;
-  
+  transform:translateX(-18%);
 }
 
 .titulo-principal{
@@ -758,7 +758,7 @@ style-interna webssodios*/
   background-position: 0 50%;
   height: 100vh;
   position: relative;
-   z-index: 1000;
+   z-index: 800;
 }
 .titulo-version-horizontal{
   display: flex;
@@ -834,13 +834,16 @@ video{
   opacity: 0;
   transition: opacity 0.4s ease;
 
-  padding: 2rem;
+  padding: 0rem 2rem;
 }
 .info-episodio h6{
-display: flex;
-  margin: 1rem 0;
+ display: flex;
+  margin: 1rem 0; 
+  transform: translateY(20%);
 }
-
+.info-episodio .texto-apoyo-horizontal{
+ transform: translateY(10%); 
+}
 .texto-intro-websodios{
   display: flex;
   margin: 3rem 2rem 0rem;
@@ -862,15 +865,23 @@ display: flex;
   position: absolute;
   left: -10;
   width: 100%;
-  height: 100%;
+  height: 130%;
   background-size: 135%;
-  background-position: 20% 50%;
+  background-position: 20% 60%;
   background-repeat: no-repeat;
   will-change: transform;
 }
 .capaw1{
   background-image: url(IMG/INTROW.jpg);
   z-index: 1;
+}
+.capaw2{
+  background-image: url(IMG/INTROW1.jpg);
+  z-index: 2;
+}
+.capaw3{
+  background-image: url(IMG/INTROW2.jpg);
+  z-index: 3;
 }
 
 /*parallax cta*/
