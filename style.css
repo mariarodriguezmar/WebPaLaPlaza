@@ -5,6 +5,16 @@
     margin: 0;
   padding: 0;
 }
+html, body {
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 :root{
     /*paleta colores*/
     --verde-pino: #1e3a25;
@@ -263,13 +273,6 @@ header.abierto {
 
 /*Diseño intro*/
 .hero-container{
-  /*background-image: url(IMG/img1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  height: 250vh;*/
-
   position: relative;
   overflow: hidden;
   height: 250vh;
@@ -630,7 +633,7 @@ footer{
 
 .capa{
   position: absolute;
-  left: -10;
+  top: 0;
   width: 100%;
   height: 100%;
   background-size: 130%;
@@ -641,7 +644,7 @@ footer{
 
 
 .capa1{
-  background-image:url(IMG/IMG-1.4.png);
+  background-image:url(IMG/fondoParallax.jpg);
 
   z-index: 1;
 }
@@ -657,10 +660,10 @@ footer{
   background-image:url(IMG/IMG-1.3.png);
   z-index: 3;
 }
-.capa4{
+/*.capa4{
   background-image:url(IMG/IMG-1.1.png);
   z-index: 4;
-}
+}*/
 
 /*parallax 2*/
 
@@ -672,10 +675,37 @@ footer{
  background-image: url(IMG/plaza.jpg);
   background-size: 150%;
   /*background-position: 55% 50%; movimiento para abajo*/
-  background-position: 52% 50%; /*movimiento para arriba*/
+  background-position: 52% 69%; /*movimiento para arriba*/
   background-repeat: no-repeat;
   z-index: 1;
   will-change: transform;
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+  .hero-container { min-height: 200vh; }
+  .hero-intro { margin-top: 8rem; gap: 1.5rem; }
+  .intro { width: min(95%, 800px); margin-top: 14rem; padding-top: 4rem; }
+  .text-intro { padding: 2rem 2rem; }
+  .texto-apoyo-horizontal { flex-wrap: wrap; gap: 1.5rem; padding: 2rem 1rem; }
+  .historia { flex-direction: column; height: auto; margin-top: 2rem; padding: 2rem 1rem; }
+  .apartado-imagen, .apartado-historia { width: 100%; }
+  .frase { width: 90%; top: 20%; left: 5%; }
+  .CTA { height: auto; padding: 6rem 2rem; margin-top: 18rem; }
+}
+
+@media (max-width: 680px) {
+  .hero-intro img { width: 220px; }
+  .titulo-secundario h1 { font-size: 3rem; }
+  .texto-apoyo-horizontal,
+  .texto-apoyo-horizontal-frases-iz,
+  .texto-apoyo-horizontal-frases-der { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+  .texto-apoyo-horizontal { padding: 1.5rem 1rem; }
+  .frase { width: 95%; top: 18%; left: 2.5%; }
+  .boton { flex-direction: column; gap: 1rem; }
+  .txt-boton { width: 100%; max-width: 340px; height: auto; padding: 1rem; }
+  .footer-nav-columnas { flex-direction: column; gap: 2rem; margin-left: 0; }
+  .contenido-footer { flex-direction: column; gap: 2rem; margin: 2rem 1rem; }
 }
 
 /*--------------------------------------------------------------------
@@ -690,14 +720,17 @@ style-interna webssodios*/
 .logo-fijo{
   margin: 2rem;
 }
-
-.hero-container-websodios{
+.logo-menu{
+  position: fixed;
+  z-index: 1100;
+}
+.hero-container-internas{
    position: relative;
   overflow: hidden;
   height: 140vh;
 }
 
-.intro-interna {
+.intro-internaw {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -817,6 +850,23 @@ video{
   transform: scale(1.02);
 }
 
+.info-episodio-icon{
+  width: 45px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: -3px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono-info{
+  font-size: var(--tamaño-l);
+  cursor: pointer;
+}
+
 /* PANEL OCULTO */
 .info-episodio{
   position: absolute;
@@ -829,7 +879,7 @@ video{
 
   background-image: url(IMG/FONDOMENÚ.png);
   background-position: center;
-  width: 85%;
+  width: 90%;
 
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -850,7 +900,7 @@ video{
 }
 
 /* APARECE AL HACER HOVER */
-.episodio:hover .info-episodio{
+.info-episodio-icon:hover + .info-episodio{
   opacity: 1;
 }
 
@@ -876,12 +926,16 @@ video{
   z-index: 1;
 }
 .capaw2{
-  background-image: url(IMG/INTROW1.jpg);
+  background-image: url(IMG/Bolsa.png);
   z-index: 2;
 }
 .capaw3{
-  background-image: url(IMG/INTROW2.jpg);
+  background-image: url(IMG/Señal.png);
   z-index: 3;
+}
+.capaw4{
+  background-image: url(IMG/Persona.png);
+  z-index: 4;
 }
 
 /*parallax cta*/
@@ -894,7 +948,7 @@ video{
   background-image: url(IMG/CTA2.jpg);
   background-size: 150%;
   /*background-position: 55% 50%; movimiento para abajo*/
-  background-position: 52% 50%; /*movimiento para arriba*/
+  background-position: 34% 63%; /*movimiento para arriba*/
   background-repeat: no-repeat;
   z-index: 1;
   will-change: transform;
