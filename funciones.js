@@ -69,3 +69,26 @@ function updateParallax() {
   ticking = false;
 }
 
+const boton = document.getElementById('boton-mapa');
+    const tarjeta = document.getElementById('card-mapa');
+
+    boton.addEventListener('click', function(e) {
+      e.preventDefault(); 
+      e.stopPropagation();
+        // Si el botón funciona como un "toggle" (abre y cierra)
+        if (tarjeta.classList.contains('card--hidden')) {
+            tarjeta.classList.remove('card--hidden');
+            tarjeta.classList.add('card--visible');
+        } else {
+            tarjeta.classList.remove('card--visible');
+            tarjeta.classList.add('card--hidden');
+        }
+    });
+
+  document.addEventListener('click', function(e) {
+    // Si la tarjeta está visible Y el clic NO fue dentro de ella
+    if (tarjeta.classList.contains('card--visible') && !e.target.closest('.card')) {
+        tarjeta.classList.remove('card--visible');
+        tarjeta.classList.add('card--hidden');
+    }
+});

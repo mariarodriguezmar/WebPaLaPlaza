@@ -953,3 +953,313 @@ video{
   z-index: 1;
   will-change: transform;
 }
+
+/*css interna mapa de memoria*/
+
+.intro-interna{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+.txt-apoyo-iz-intro h3{
+  color: var(--color-titulo-acento3);
+
+}
+.txt-principal-intro{
+    gap: 1rem;
+    align-items: baseline;
+}
+#naranja{
+   color: var(--color-titulo-acento1);
+}
+#amarillo{
+  color: var(--color-titulo-acento2);
+}
+.txt-apoyo-intro-interna{
+   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(-54px);
+  margin-bottom: -2%;
+}
+#centrado{
+  text-align: center;
+}
+
+.txt-medio-intro-internas{
+  display: flex;
+ justify-content: center;
+}
+/*contenido mapa*/
+.mapa{
+  display: flex;
+  flex-direction: column;
+  height: 130vh;
+  position: relative;
+  align-items: center;
+   background-image: url(IMG/FONDOMENÚ.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 130%;
+   z-index: 100;
+}
+.texto-apoyo-horizontal-der{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 3rem 3rem 1rem;
+  }
+  .texto-apoyo-horizontal-iz{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0rem 3rem 3rem;
+  position: relative;
+  }
+
+
+.texto-apoyo-vertical-derecha{
+  position: absolute;
+  top: 32rem;
+  right: 3rem;
+  transform: rotate(90deg);
+  transform-origin: top right;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.titulo-version-horizontal-iz h1{
+  color: var(--color-titulo-acento1);
+}
+.titulo-version-horizontal-iz {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin:-2rem 0rem 2rem 15rem;
+    position: relative;
+}
+.img-mapa{
+  width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.convenciones{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  align-items: end;
+    width: 100%;
+    margin-right: 15rem;
+    position: relative;
+    margin-top: -2rem;
+}
+.convenciones-1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+}
+
+/*puntos del mapa*/
+.puntos-mapa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: fit-content;
+  position: absolute;
+  overflow: hidden;
+  top: 24%;
+  transition: transform 0.4s ease;
+}
+.icono-boton{
+  position: absolute;
+  width: 45px;
+}
+.fotom1{
+  top: -16rem;
+  left: 27rem;
+}
+
+/*ecard mapa*/
+.card--hidden {
+  position: absolute;
+  top: 10%;      
+  z-index: 1000;  
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  transition: opacity 400ms ease, transform 400ms ease, visibility 400ms;
+}
+.card--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+.card {
+  display: flex;
+  place-items: center;
+  background-image: url(IMG/Fondo2.png);
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: var(--borde-m);
+  position: relative;
+  justify-content: center;
+}
+.card__background {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: var(--borde-m);
+  transition: transform 500ms ease-in;
+  transform-origin: center;
+  will-change: transform;
+}
+.info-mapa-icon{
+  position: relative;
+}
+.info-foto-mapa{
+  position: absolute;
+  inset: auto 0 0 0;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.25rem 6.875rem;
+  background: linear-gradient(
+     180deg,
+    rgba(56, 63, 31, 0) 0%,
+    rgba(56, 63, 31, 0.35) 30%,
+    rgba(56, 63, 31, 0.85) 80%,
+    #383f1f 100%
+    /*
+    180deg,
+    rgba(30, 58, 37, 0) 0%,
+    rgba(30, 58, 37, 0.35) 20%,
+    rgba(30, 58, 37, 0.85) 70%,
+    #1e3a25 100%*/
+  );
+  transform: translateY(100%);
+  transition: transform 500ms ease-out;
+}
+.info-foto-mapa-contenedor{
+   --flow-space: -1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0rem 2rem;
+}
+.info-foto-mapa-contenedor h6::after {
+  content: "";
+  position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+@media (any-hover: hover) and (any-pointer: fine) {
+  .info-foto-mapa {
+    transform: translateY(62%);
+    transition: transform 400ms ease-out;
+    transition-delay: 500ms;
+  }
+ 
+  .card__background {
+    transition: transform 700ms ease-in;
+  }
+.info-foto-mapa-contenedor> :not(.info-foto-mapa-contenedor h6) {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .card:hover .info-foto-mapa,
+  .card:focus-within .info-foto-mapa {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+ 
+  .card:hover .card__background,
+  .card:focus-within .card__background {
+    transform: scale(1.5);
+  }
+.card:hover .info-foto-mapa-contenedor  > :not(.info-foto-mapa-contenedor h6),
+  .card:hover .card__button,
+  .card:focus-within .info-foto-mapa-contenedor > :not(.info-foto-mapa-contenedor h6)
+   {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 500ms;
+  }
+  
+}
+
+/*Parallax intro*/
+.parallax-intro-mapa{
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  z-index: 1;
+}
+.capam{
+  position: absolute;
+  left: -10;
+  width: 100%;
+  height: 130%;
+  background-size: 135%;
+  background-position: 20% 60%;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+.capam1{
+  background-image: url(IMG/INTROW.jpg);
+  z-index: 1;
+}
+.capam2{
+  background-image: url(IMG/INTROW1.jpg);
+  z-index: 2;
+}
+.capam3{
+  background-image: url(IMG/INTROW2.jpg);
+  z-index: 3;
+}
+
+/*titulo hero habitar*/
+.txt-apoyo-intro-h{
+   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(-54px);
+  margin-bottom: -2%;
+}
+.txt-principal-intro{ 
+ display: flex;
+ justify-content: center;
+}
