@@ -20,60 +20,52 @@ document.addEventListener('keydown', function (e) {
 
 
 /*Parallax home*/
-window.addEventListener("scroll", parallaxScroll);
+const parallaxLayers = [
+  { selector: ".capa1", speed: 0.08 },
+  { selector: ".capa2", speed: 0.16 },
+  { selector: ".capa3", speed: 0.28 },
+  { selector: ".capa4", speed: 0.40 },
 
-function parallaxScroll(){
+  { selector: ".capaw1", speed: 0.08 },
+  { selector: ".capaw2", speed: 0.16 },
+  { selector: ".capaw3", speed: 0.28 },
+  { selector: ".capaw4", speed: 0.40 },
+];
 
-  const scrolled = window.scrollY;
+const parallaxTargets = parallaxLayers.map(layer => ({
+  el: document.querySelector(layer.selector),
+  speed: layer.speed,
+}));
 
-  document.querySelector(".capa1").style.transform =
-  `translateY(-${scrolled * 0.08}px)`;
+const capaCta = document.querySelector(".capa-cta");
+const capaCtaWebsodios = document.querySelector(".capa-cta-websodios");
 
-  document.querySelector(".capa2").style.transform =
-  `translateY(-${scrolled * 0.16}px)`;
+let latestScroll = 0;
+let ticking = false;
 
-  document.querySelector(".capa3").style.transform =
-  `translateY(-${scrolled * 0.28}px)`;
+window.addEventListener("scroll", () => {
+  latestScroll = window.pageYOffset || document.documentElement.scrollTop || 0;
 
-  document.querySelector(".capa4").style.transform =
-  `translateY(-${scrolled * 0.4}px)`;
-
-}
-
-/*parallax cta home*/
-window.addEventListener("scroll", function () {
-
-  const scroll = window.scrollY;
-
-  document.querySelector(".capa-cta").style.transform =
-    `translateY(${scroll * -0.12}px)`;
-
+  if (!ticking) {
+    window.requestAnimationFrame(updateParallax);
+    ticking = true;
+  }
 });
 
-/*parallax cta websodios*/
-window.addEventListener("scroll", function () {
+function updateParallax() {
+  parallaxTargets.forEach(target => {
+    if (!target.el) return;
+    target.el.style.transform = `translate3d(0, -${latestScroll * target.speed}px, 0)`;
+  });
 
-  const scroll = window.scrollY;
+  if (capaCta) {
+    capaCta.style.transform = `translate3d(0, -${latestScroll * 0.16}px, 0)`;
+  }
 
-  document.querySelector(".capa-cta-websodios").style.transform =
-    `translateY(${scroll * -0.12}px)`;
+  if (capaCtaWebsodios) {
+    capaCtaWebsodios.style.transform = `translate3d(0, -${latestScroll * 0.16}px, 0)`;
+  }
 
-});
-
-/*Parallax home*/
-window.addEventListener("scroll", parallaxScroll);
-
-function parallaxScroll(){
-
-  const scrolled = window.scrollY;
-
-  document.querySelector(".capaw").style.transform =
-  `translateY(-${scrolled * 0.08}px)`;
-
-  document.querySelector(".capaw1").style.transform =
-  `translateY(-${scrolled * 0.16}px)`;
-
-  document.querySelector(".capaw2").style.transform =
-  `translateY(-${scrolled * 0.28}px)`;
-
+  ticking = false;
 }
+
