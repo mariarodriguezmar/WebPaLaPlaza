@@ -1074,23 +1074,120 @@ video{
 
 /*puntos del mapa*/
 .puntos-mapa{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: fit-content;
   position: absolute;
-  overflow: hidden;
-  top: 24%;
-  transition: transform 0.4s ease;
+ 
 }
+
+.punto{
+  position: absolute;
+  top: 14rem;
+  left: -25rem;
+}
+
+/* BOTÓN GENERAL */
 .icono-boton{
   position: absolute;
-  width: 45px;
+  width: 25px;
+  z-index: 20;
+  display: block;
+  transition: transform 1s linear;
 }
-.fotom1{
-  top: -16rem;
+.icono-boton:hover{
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.foto-mapa-1{
+  top: 23.5rem;
+  left: 28.5rem;
+}
+.foto-mapa-2{
+  top: 26rem;
+  left: 29.9rem;
+}
+.foto-mapa-3{
+  top: 15.5rem;
+  left: 34.5rem;
+}
+.foto-mapa-4{
+  top: 24rem;
+  left: 31rem;
+}
+.foto-mapa-5{
+  top: 5.8rem;
+  left: 37.5rem;
+}
+.foto-mapa-6{
+  top: 2.8rem;
+  left: 40.5rem;
+}
+.foto-mapa-7{
+  top: 16.9rem;
   left: 27rem;
+}
+.foto-mapa-8{
+  top: 17.8rem;
+  left: 33.5rem;
+}
+.foto-mapa-9{
+  top: 20rem;
+  left: 28.5rem;
+}
+.foto-mapa-10{
+  top: 16.9rem;
+  left: 8.5rem;
+}
+.foto-mapa-11{
+  top: 18.8rem;
+  left: 11rem;
+}
+.foto-mapa-12{
+  top: 17.8rem;
+  left: 31rem;
+}
+.foto-mapa-13{
+  top: 5.4rem;
+  left: 23rem;
+}
+.foto-mapa-14{
+ top: 5.4rem;
+  left: 27rem;
+}
+.foto-mapa-15{
+  top: 17.8rem;
+  left: 23rem;
+}
+.foto-mapa-16{
+  top: 13rem;
+  left: 37.5rem;
+}
+.foto-mapa-17{
+  top: 26.5rem;
+  left: 23rem;
+}
+.foto-mapa-18{
+  top: 19rem;
+  left: 43rem;
+}
+.foto-mapa-a{
+  top: 15.5rem;
+  left: 37.5rem;
+}
+
+.foto-mapa-b{
+  top: 0.8rem;
+  left: 42rem;
+}
+.foto-mapa-c{
+  top: 14rem;
+  left: 23rem;
+}
+.foto-mapa-d{
+  top: 21.8rem;
+  left: 24.2rem;
+}
+.foto-mapa-e{
+  top: 16.9rem;
+  left: 40.5rem;
 }
 
 /*ecard mapa*/
