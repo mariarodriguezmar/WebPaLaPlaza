@@ -1075,7 +1075,7 @@ video{
 /*puntos del mapa*/
 .puntos-mapa{
   position: absolute;
- 
+ transition: transform 0.4s ease;
 }
 
 .punto{
@@ -1095,6 +1095,11 @@ video{
 .icono-boton:hover{
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+.puntos-mapa.mapa--card-open .icono-boton {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .foto-mapa-1{
   top: 23.5rem;
@@ -1225,6 +1230,15 @@ video{
   position: relative;
   justify-content: center;
 }
+/* ensure visible cards sit above other map elements */
+.card.card--visible {
+  z-index: 2000;
+  pointer-events: auto;
+}
+
+.card {
+  cursor: default;
+}
 .card__background {
   width: 95%;
   height: 95%;
@@ -1233,6 +1247,10 @@ video{
   transition: transform 500ms ease-in;
   transform-origin: center;
   will-change: transform;
+}
+/* make sure background image doesn't intercept pointer events */
+.card__background {
+  pointer-events: none;
 }
 .info-mapa-icon{
   position: relative;
@@ -1261,6 +1279,26 @@ video{
   );
   transform: translateY(100%);
   transition: transform 500ms ease-out;
+}
+
+/* ensure cards only capture pointer when visible */
+.card.card--hidden {
+  pointer-events: none;
+}
+.card.card--visible {
+  pointer-events: auto;
+}
+
+/* hover/focus rules that apply when card is visible (stronger specificity) */
+.card.card--visible:hover .info-foto-mapa,
+.card.card--visible:focus-within .info-foto-mapa {
+  transform: translateY(0);
+  transition: transform 400ms ease-in;
+}
+
+.card.card--visible:hover .card__background,
+.card.card--visible:focus-within .card__background {
+  transform: scale(1.5);
 }
 .info-foto-mapa-contenedor{
    --flow-space: -1rem;

@@ -69,26 +69,45 @@ function updateParallax() {
   ticking = false;
 }
 
-const boton = document.getElementById('boton-mapa');
-    const tarjeta = document.getElementById('card-mapa');
+const botonesMapa = document.querySelectorAll('.icono-boton');
+const tarjetasMapa = document.querySelectorAll('.card');
+const puntosMapa = document.querySelector('.puntos-mapa');
 
-    boton.addEventListener('click', function(e) {
-      e.preventDefault(); 
-      e.stopPropagation();
-        // Si el botón funciona como un "toggle" (abre y cierra)
-        if (tarjeta.classList.contains('card--hidden')) {
-            tarjeta.classList.remove('card--hidden');
-            tarjeta.classList.add('card--visible');
-        } else {
-            tarjeta.classList.remove('card--visible');
-            tarjeta.classList.add('card--hidden');
-        }
-    });
+function cerrarTodasLasTarjetas() {
+  tarjetasMapa.forEach(tarjeta => {
+    tarjeta.classList.remove('card--visible');
+    tarjeta.classList.add('card--hidden');
+  });
+  if (puntosMapa) puntosMapa.classList.remove('mapa--card-open');
+}
 
-  document.addEventListener('click', function(e) {
-    // Si la tarjeta está visible Y el clic NO fue dentro de ella
-    if (tarjeta.classList.contains('card--visible') && !e.target.closest('.card')) {
-        tarjeta.classList.remove('card--visible');
-        tarjeta.classList.add('card--hidden');
+function mostrarTarjeta(tarjeta) {
+  cerrarTodasLasTarjetas();
+  if (!tarjeta) return;
+  tarjeta.classList.remove('card--hidden');
+  tarjeta.classList.add('card--visible');
+  if (puntosMapa) puntosMapa.classList.add('mapa--card-open');
+}
+
+botonesMapa.forEach(boton => {
+  boton.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const punto = boton.closest('.punto');
+    const tarjeta = punto ? punto.querySelector('.card') : null;
+    if (!tarjeta) return;
+
+    if (tarjeta.classList.contains('card--hidden')) {
+      mostrarTarjeta(tarjeta);
+    } else {
+      cerrarTodasLasTarjetas();
     }
+  });
+});
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.card') && !e.target.closest('.icono-boton')) {
+    cerrarTodasLasTarjetas();
+  }
 });
