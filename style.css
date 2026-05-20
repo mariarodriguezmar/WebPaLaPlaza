@@ -446,11 +446,13 @@ header.abierto {
   align-items: center;
   justify-content: center;
   background-image: url(IMG/FONO-CTA.png);
+  background-size: cover;
   width: 100%;
   height: 35%;
   margin-top: 20%;
   z-index: 10;
 }
+
 
 .titulo-cta{
 display: grid;
@@ -542,7 +544,7 @@ position: relative;
   font-family: var(--fuente-titulos);
   font-size: var(--tamaño-botones);
   color: var(--color-texto-frases);
-  margin-left: 4%;
+
 }
 .texto-apoyo-horizontal-frases-iz, .texto-apoyo-horizontal-frases-der {
   transform: translateY(6rem);
@@ -1044,7 +1046,7 @@ video{
     flex-direction: row;
     align-items: center;
     width: 100%;
-    margin:-2rem 0rem 2rem 15rem;
+    margin:-2rem 0rem 2rem 18rem;
     position: relative;
 }
 .img-mapa{
@@ -1057,12 +1059,12 @@ video{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 1rem;
   align-items: end;
-    width: 100%;
-    margin-right: 15rem;
-    position: relative;
-    margin-top: -2rem;
+  width: 100%;
+  margin-right: 6rem;
+  position: relative;
+  transform: translateY(42px);
 }
 .convenciones-1{
   display: flex;
@@ -1166,10 +1168,14 @@ video{
   left: 37.5rem;
 }
 .foto-mapa-17{
+  top: 20.5rem;
+  left: 34.5rem;
+}
+.foto-mapa-18{
   top: 26.5rem;
   left: 23rem;
 }
-.foto-mapa-18{
+.foto-mapa-19{
   top: 19rem;
   left: 43rem;
 }
@@ -1381,6 +1387,53 @@ video{
 .capam3{
   background-image: url(IMG/INTROW2.jpg);
   z-index: 3;
+}
+
+/*parallax cta mapa*/
+.capa-cta-mapa{
+  position: absolute;
+  inset: 0;
+  bottom: -50%; /*movimiento para arriba*/
+  /*top: -30%; movimiento para abajo*/
+  background-image: url(img/Fondo-parallax-cta-mapa.jpg);
+  background-size: 132%;
+  background-position: 31% 68%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  will-change: transform;
+}
+/*Parallax intro mapa*/
+.parallax-intro-mapa{
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  z-index: 1;
+}
+.capam{
+  position: absolute;
+  left: -10;
+  width: 100%;
+  height: 130%;
+  background-size: 103%;
+  background-position: 100% 66%;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+.capam1{
+  background-image: url(IMG/parallax-intro-mapa.jpg);
+  z-index: 1;
+}
+.capam2{
+  background-image: url(img/parallax-intro-mapa-hojas.png);
+  z-index: 2;
+}
+.capam3{
+  background-image: url(IMG/parallax-intro-mapa-racimo.png);
+  z-index: 3;
+}
+.capam4{
+  background-image: url(img/parallax-intro-mapa-platano.png);
+  z-index: 4;
 }
 
 /*titulo hero habitar*/
