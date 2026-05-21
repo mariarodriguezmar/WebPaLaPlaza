@@ -1,40 +1,4 @@
-:root{
-    /*tamaño fuentes responsivos
 
---tamaño-xxs:clamp(0.7rem, 0.8vw, 0.75rem);
-
---tamaño-xs:clamp(0.9rem, 1.1vw, 1rem);
-
---tamaño-s:clamp(1.8rem, 3vw, 2.5rem);
-
---tamaño-m:clamp(2.2rem, 4vw, 3rem);
-
---tamaño-l:clamp(2.5rem, 5vw, 3.5rem);
-
---tamaño-xl:clamp(3.5rem, 7vw, 5rem);
-
---tamaño-xxl:clamp(4.5rem, 10vw, 7.5rem);
-
---tamaño-titulos-principales: var(--tamaño-l);
-
---tamaño-titulos-acento1: var(--tamaño-xl);
-
---tamaño-titulos-acento2: var(--tamaño-s);
-
---tamaño-titulos-acento3: var(--tamaño-m);
-
---tamaño-parrafos: var(--tamaño-xs);
-
---tamaño-texto-apoyo: var(--tamaño-xxs);
-
---tamaño-botones:clamp(1rem, 2vw, 1.4rem);
-
---tamaño-menu:clamp(2rem, 4vw, 3.5rem);
-
---tamaño-frases:clamp(2.5rem, 6vw, 5rem);
-
---espaciado-texto-apoyo:clamp(0.08rem, 0.2vw, 0.18rem);
-}*/
 @media (max-width:600px){
 
 h1{
@@ -146,8 +110,7 @@ h6{
 /*hero*/
 .hero-container{position: relative;
     overflow: hidden;
-    min-height: 90vh;
-    max-height: 190vh;
+    height: fit-content;
     top: 0;
     left: 0;
     padding-bottom: 0;
@@ -195,8 +158,8 @@ h6{
     position: relative;
     width: 100%;
     padding-top: 6rem;
-    height: 50vh;
-    top: -2rem;
+    height: 26rem;
+    top: -3rem;
     gap: 1rem;
     z-index: 20;
 }
@@ -216,9 +179,9 @@ h6{
   background-repeat: no-repeat;
   flex-direction: column;
   justify-content: center;
-  height: 92vh;
+  height: 52rem;
   gap: 1rem;
-  top: -14rem;
+  top: 14rem;
 }
 
 .texto-apoyo-horizontal{
@@ -262,24 +225,21 @@ h6{
   display: flex;
     flex-direction: column;
     width: 100%;
-    height: 98vh;
+    height: 55rem;
     justify-content: center;
     align-items: center;
     gap: 6rem;
-    position: relative;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
     margin-top: 0px;
-    top: -28rem;
+    top:3rem;
+    margin-bottom: -10rem;
 }
 .capa-cta {
-  height: 98vh;
+  height: 49rem;
   background-size: 300%;
   background-position: 51%;
   z-index: 1;
   will-change: transform;
-  top: 16rem;
+  top: 18rem;
 }
 .frase{
   display: none;
@@ -334,7 +294,7 @@ h6{
 }
 
 .txt-boton{
-  width: 21vh;
+  width: 10rem;
   height: 50%;
   transform: translatex(-0.5rem);
 }
@@ -345,7 +305,7 @@ h6{
 .boton img{
   height: 50px;
   width: auto;
-  transform: translateX(0.75rem);
+  transform: translateX(0.2rem);
   z-index: 99;
 }
 .boton span{
@@ -354,8 +314,10 @@ h6{
 }
 
 footer{
+  position: relative;
+  z-index: 2;
   width: 100%;
-  height: 41vh;
+  height: 22rem;
   gap: 0rem;
 }
 .contenido-footer{
