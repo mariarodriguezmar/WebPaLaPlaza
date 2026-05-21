@@ -43,7 +43,7 @@ h6{
   overflow: hidden;
 }
   .contenido-menu{
-   height: 50rem;
+   height: 55rem;
     justify-content: center;
     gap: 6rem;
     position: relative;
@@ -162,7 +162,7 @@ h6{
     width: 100%;
     padding-top: 6rem;
     height: 26rem;
-    top: -0.7rem;
+    top: 1rem;
     gap: 1rem;
     z-index: 20;
 }
@@ -253,8 +253,8 @@ h6{
     background-image: url(IMG/FONO-CTA.png);
     border-radius: 1rem;
     background-size: 150%;
-    width: 90%;
-    height: 19vh;
+    width: 85%;
+    height: 18vh;
     margin-top: 100px;
     z-index: 10;
 }
