@@ -43,7 +43,7 @@ h6{
   overflow: hidden;
 }
   .contenido-menu{
-   height: 47rem;
+   height: 50rem;
     justify-content: center;
     gap: 6rem;
     position: relative;
@@ -162,7 +162,7 @@ h6{
     width: 100%;
     padding-top: 6rem;
     height: 26rem;
-    top: -3rem;
+    top: -0.7rem;
     gap: 1rem;
     z-index: 20;
 }
@@ -184,7 +184,7 @@ h6{
   justify-content: center;
   height: 52rem;
   gap: 1rem;
-  top: 14rem;
+  top: 15.5rem;
 }
 
 .texto-apoyo-horizontal{
@@ -234,13 +234,13 @@ h6{
     gap: 6rem;
     margin-top: 0px;
     top:3rem;
-    margin-bottom: -10rem;
+    margin-bottom: -8rem;
     overflow: hidden;
 }
 .capa-cta {
   height: 45rem;
   background-size: 300%;
-  background-position: 51%;
+  background-position: 51% 80%;
   z-index: 1;
   will-change: transform;
   top: 18rem;
@@ -254,10 +254,9 @@ h6{
     border-radius: 1rem;
     background-size: 150%;
     width: 90%;
-    height: 15vh;
+    height: 19vh;
     margin-top: 100px;
     z-index: 10;
-    overflow: hidden;
 }
   
 .titulo-cta{
