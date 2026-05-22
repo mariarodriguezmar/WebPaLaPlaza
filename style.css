@@ -1443,3 +1443,6 @@ video{
 #xpc{
   display: none;
 }
+.centrado{
+  text-align: center;
+}
