@@ -2,7 +2,7 @@
 @media (max-width:600px){
 
 h1{
-  font-size: 3rem;
+  font-size: 2.6rem;
 }
 
 h3{
@@ -66,7 +66,7 @@ h6{
     justify-content: space-evenly;
     padding: 4rem 1rem 1rem;
     height: 20%;
-    gap: 3rem;
+    gap: 2rem;
 }
 
   .texto-apoyo-vertical-izquierda{
@@ -122,7 +122,7 @@ h6{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     object-fit: cover;
 }
 
@@ -361,5 +361,169 @@ transform: translateX(-0.7rem);
   margin: 1rem;
 }
 
+/*interna websodios*/
+.logo-fijo{
+  margin: 1.5rem 1rem;
+  width: 3.5rem;
+}
+.hero-container-internas{
+  position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+.parallax-intro-websodios{
+  position: absolute;
+  top: 0;
+  inset: 0;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.capaw{
+    position: absolute;
+    top: 0;
+    height: cover;
+    width: 100%;
+    height: 100%;
+    background-size: 180%;        
+    background-position: 63% 0%;
+    background-repeat: no-repeat;
+    will-change: transform;
+    overflow: hidden;
 
+}
+.intro-internaw {
+  margin-top: 9rem;
+  gap: 1rem;
+  transform:translateX(0%);
+  overflow: hidden;
+}
+.intro-internaw h2{
+  padding: 0 3rem;
+  text-align: center;
+}
+.txt-apoyo-intro{
+  gap: 0.5rem;
+  transform: translateY(-18px);
+  margin-left: 1rem;
+  margin-bottom: -2%;
+}
+.txt-rotado-vertical-intro{
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -1.7rem;
+  top: 29%;
+  transform-origin: center;
+}
+.txt-apoyo-iz-intro h6{
+  position: relative;
+  right: 0.4rem;
+  font-size: 1.2rem;
+  transform: translatey(0px);
+}
+.txt-apoyo-iz-intro {
+  font-size: 1.2rem;
+  transform: translatey(6px);
+}
+.txt-rotado-vertical-intro h6{
+  font-size: 1.2rem;
+}
+.txt-apoyo-iz-intro h5{
+  font-size: 1.5rem;
+}
+.websodios{
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 35.5rem;
+    top: 0;
+    gap: 1rem;
+    z-index: 20;
+    overflow: hidden;
+  gap: 1rem;
+  top: -16rem;
+}
+.color-web{
+  font-size: 2.6rem;
+}
+.titulo-version-horizontal{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem 10rem;
+  justify-content: center;
+}
+.contenedor-videos{
+  gap: 1rem;
+  padding: 1rem 1rem;
+  margin-left: 1rem;
+}
+.episodio{
+  flex: 0 0 100%;
+}
+video{
+  display:flex;
+  height: 10rem;
+  width: auto;
+  display: block;
+}
+.info-episodio-icon{
+  width: 35px;
+  top: 0.1px;
+}
+/* PANEL OCULTO */
+.info-episodio{
+
+  padding: 2rem 0.9rem;
+}
+.info-episodio h6{
+  font-size: 1.8rem;
+  line-height: 2rem;
+ display: flex;
+ text-align: center;
+  margin:  0; 
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  transform: translateY(0%);
+}
+.subtitulo-lineas h2 {
+  text-align: center;
+}
+.texto-intro-websodios{
+  display: none;
+}
+.alinear-centro{
+  text-align: end;
+}
+.container-cta-internas{
+  z-index: 1;
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 68rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+
+    overflow: hidden;
+    top: -38rem;
+    margin-bottom: -53rem;
+}
+.capa-cta-websodios {
+  height: cover;
+  background-size: 300%;
+  z-index: 1;
+  will-change: transform;
+  top: -18rem;
+    background-position: 25% 58%;
+    overflow: hidden;
+    
+
+}
+#xpc {
+  display: flex;
+}
 }

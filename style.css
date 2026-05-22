@@ -1395,7 +1395,7 @@ video{
 .parallax-intro-mapa{
   position: absolute;
   inset: 0;
-  height: 100%;
+  height: 125%;
   z-index: 1;
 }
 .capam{
@@ -1440,6 +1440,6 @@ video{
  display: flex;
  justify-content: center;
 }
-.xpc{
+#xpc{
   display: none;
 }
