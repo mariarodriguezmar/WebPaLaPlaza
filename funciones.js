@@ -51,7 +51,7 @@ const capaCta = document.querySelector(".capa-cta");
 const capaCtaWebsodios = document.querySelector(".capa-cta-websodios");
 const capaCtaMapa = document.querySelector(".capa-cta-mapa");
 const capaCtaArchivo = document.querySelector(".capa-cta-archivo");
-
+const capaCarrosPostales = document.querySelector(".capa-carros-postales");
 let latestScroll = 0;
 let ticking = false;
 
@@ -82,6 +82,9 @@ function updateParallax() {
   }
   if (capaCtaArchivo) {
     capaCtaArchivo.style.transform = `translate3d(0, -${latestScroll * 0.16}px, 0)`;
+  }
+  if (capaCarrosPostales) {
+    capaCarrosPostales.style.transform = `translate3d(0, -${latestScroll * 0.16}px, 0)`;
   }
   ticking = false;
 }
@@ -127,4 +130,105 @@ document.addEventListener('click', function(e) {
   if (!e.target.closest('.card') && !e.target.closest('.icono-boton')) {
     cerrarTodasLasTarjetas();
   }
+});
+
+/*calculadora postales */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- BLOQUE 1: GESTIÓN DE SELECCIONES VISUALES ---
+    // Función para marcar como "seleccionado" solo un elemento por grupo
+    function configurarSelectorExclusivo(idContenedor, claseObjetivo) {
+        const contenedor = document.getElementById(idContenedor);
+        if (!contenedor) return;
+
+        contenedor.addEventListener('click', (e) => {
+            const elementoClickeado = e.target.closest(claseObjetivo);
+            if (!elementoClickeado) return;
+
+            // Quitamos la clase 'seleccionado' a los otros elementos de este grupo
+            contenedor.querySelectorAll('.seleccionado').forEach(el => el.classList.remove('seleccionado'));
+            
+            // Se la agregamos al elemento actual
+            elementoClickeado.classList.add('seleccionado');
+        });
+    }
+
+    // Activamos la interacción en tus tres bloques de menús
+    configurarSelectorExclusivo('grupo-fotos', '.postal-elegible');
+    configurarSelectorExclusivo('grupo-fondos', '.postal-elegible');
+    
+    // Como tu contenedor de frases usa una clase y no un ID, lo asignamos directamente:
+    const contenedorFrases = document.querySelector('.frases-postales');
+    if (contenedorFrases) {
+        contenedorFrases.id = 'grupo-frases'; // Le inyectamos el ID temporalmente para compatibilidad
+        configurarSelectorExclusivo('grupo-frases', '.frase-elegible');
+    }
+
+
+    // --- BLOQUE 2: PROCESAMIENTO Y "SUMA GRÁFICA" AL HACER CLIC ---
+    const btnCrear = document.getElementById('btn-crear-postal');
+
+    btnCrear.addEventListener('click', () => {
+        // 1. Captura de datos de los elementos marcados con la clase .seleccionado
+        const fotoElegida = document.querySelector('#grupo-fotos .seleccionado');   
+        const fondoElegido = document.querySelector('#grupo-fondos .seleccionado'); 
+        const fraseElegida = document.querySelector('#grupo-frases .seleccionado'); 
+
+        // Validación preventiva: Si falta algún elemento detiene el script
+        if (!fotoElegida || !fondoElegido || !fraseElegida) {
+            alert('Por favor, selecciona una foto, un fondo y una frase para poder crear tu postal.');
+            return;
+        }
+
+        // 2. Extracción de rutas e identificadores
+        const rutaCara1 = fotoElegida.getAttribute('data-img');     
+        const rutaFondoCara2 = fondoElegido.getAttribute('data-fondo'); 
+        const idFondo = fondoElegido.getAttribute('data-id');       
+        const idFrase = fraseElegida.getAttribute('data-id');       
+
+        // 3. Matriz de combinación inteligente para los colores de las frases gráficas
+        const diccionarioColores = {
+            frase1: {
+                fondo1: "IMG/Frase-postal-a1.webp",
+                fondo2: "IMG/Frase-postal-v1.webp",
+                fondo3: "IMG/Frase-postal-b1.webp",
+                fondo4: "IMG/Frase-postal-a1.webp" 
+            },
+            frase2: {
+                fondo1: "IMG/Frase-postal-a2.webp",
+                fondo2: "IMG/Frase-postal-v2.webp",
+                fondo3: "IMG/Frase-postal-b2.webp",
+                fondo4: "IMG/Frase-postal-a2.webp"
+            },
+            frase3: {
+                fondo1: "IMG/Frase-postal-a3.webp",
+                fondo2: "IMG/Frase-postal-v3.webp",
+                fondo3: "IMG/Frase-postal-b3.webp",
+                fondo4: "IMG/Frase-postal-a3.webp"
+            }
+        };
+
+        // Resolución de la frase con base en el fondo escogido
+        const rutaFraseCorrectaCara2 = diccionarioColores[idFrase][idFondo];
+
+        // 4. Renderizado: Inyectamos los atributos gráficos calculados en sus respectivas caras
+        document.getElementById('render-foto').src = rutaCara1;              
+        document.getElementById('render-fondo').src = rutaFondoCara2;         
+        document.getElementById('render-frase-img').src = rutaFraseCorrectaCara2; 
+
+        // 5. Gestión de visibilidad y scroll dinámico
+        const contenedorResultado = document.querySelector('.contenedor-resultado-postal');
+        
+        // Rompemos el display: none
+        contenedorResultado.style.display = 'block';
+
+        // Disparamos la opacidad fluida de tu CSS unificado
+        setTimeout(() => {
+            contenedorResultado.classList.add('visible');
+        }, 30);
+
+        // Llevamos la vista del navegador al centro de la postal generada
+        contenedorResultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
 });

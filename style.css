@@ -1505,7 +1505,7 @@ video{
 }
 .texto-apoyo-vertical-derecha-postales {
     position: absolute;
-    top: 95rem;
+    top: 143rem;
     right: 3rem;
     transform: rotate(90deg);
     transform-origin: top right;
@@ -1518,7 +1518,7 @@ video{
   background-image: url(IMG/Fondo2.png);
    position: relative;
   overflow: hidden;
-  height: 140vh;
+  height: 120vh;
 }
 .foto-intro-postales{
   background-image: url(IMG/Foto-intro-postales.jpg);
@@ -1529,7 +1529,7 @@ video{
    right: 9rem;
     top: 4rem;
     width: 81%;
-    height: 59%;
+    height: 69%;
     z-index: 1;
 }
 .hero-container-interna-postales p{
@@ -1545,17 +1545,23 @@ video{
   gap: 4rem;
   margin-left: -32rem;
 }
-.capa-carros-postales{
-  display: none;
-  position: absolute;
-  inset: 0;
-  bottom: -50%; 
-  background-image: url(img/Parallax-carros-postales.jpg);
-  background-size: 132%;
-  background-position: 31% 68%;
-  background-repeat: no-repeat;
-  z-index: 10;
-  will-change: transform;
+.container-parallax-carros{
+  position: relative;
+  overflow: hidden;
+  height: 120vh;
+}
+
+.capa-carros-postales {
+   display: flex;
+   position: absolute;
+   inset: 0;
+   bottom: -32%;
+   background-image: url(img/Parallax-carros-postales.jpg);
+   background-size: 115%;
+   background-position: 0% 256%;
+   background-repeat: no-repeat;
+   z-index: 10;
+   will-change: transform;
 }
 .titulo-principal-postales{
   display: flex;
@@ -1570,7 +1576,178 @@ video{
     align-items: center;
     gap: 1rem;
     transform: translateY(-17px);
-    margin-left: 7%;
-    margin-bottom: -14%;
+    margin-bottom: -11%;
 
+}
+.selector-postales{
+  height: 129vh;
+  background-image: url(IMG/FONDOMENÚ.png);
+  background-size: 129%;
+  background-repeat: no-repeat;
+  background-position-y: -1rem;
+}
+.opciones-postales{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem;
+}
+.opcion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.opcion img{
+  width: 260px;
+  height: auto;
+  border-radius: var(--borde-s);
+}
+.opcion div{
+  gap: 1rem;
+  display:flex;
+  flex-direction: row;
+}
+.frases-postales div{
+  background-color: var(--verde-oliva-medio);
+  border-radius: var(--borde-s);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.frases-postales{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 13rem;
+  margin-bottom: 6rem;
+  height: 3rem;
+}
+.frases-postales h2{
+  font-size: var(--tamaño-xs);
+}
+.titulo-postal{
+  font-size: 6.5rem;
+}
+#btn-crear-postal {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+/*dieseño ecard postal*/
+/* ==========================================================================
+   ESTILOS PARA LA POSTAL 3D ANIMADA (OCULTA POR DEFECTO)
+   ========================================================================== */
+
+/* 1. El contenedor principal que controla la visibilidad y perspectiva 3D */
+.contenedor-resultado-postal {
+  display: none; /* 🔥 Clave: Oculta la sección por completo al inicio */
+  perspective: 1500px; /* Brinda profundidad realista al giro 3D */
+  width: 550px; /* Ancho de la postal (puedes ajustarlo a tu diseño) */
+  height: 380px; /* Alto de la postal */
+  margin: 5rem auto; /* Centra la postal en la pantalla y da espacio arriba/abajo */
+  opacity: 0; /* Preparado para una transición suave de aparición */
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Clase que agregaremos con JS (opcional para transicionar la aparición) */
+.contenedor-resultado-postal.visible {
+  display: block;
+  opacity: 1;
+}
+
+/* 2. El esqueleto de la postal que va a rotar */
+.postal-3d {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Permite que los hijos hereden el entorno 3D */
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Giro suave y natural */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra elegante para dar relieve */
+  border-radius: 12px;
+}
+
+/* 3. El activador del efecto: Cuando el mouse pasa por encima, gira 180 grados */
+.contenedor-resultado-postal:hover .postal-3d {
+  transform: rotateY(180deg);
+}
+
+/* 4. Propiedades comunes para ambas caras (Frente y Atrás) */
+.cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta la parte trasera de la capa al girar */
+  border-radius: 12px;
+  overflow: hidden; /* Evita que las imágenes se salgan de las esquinas redondeadas */
+}
+
+/* 5. CARA FRONTAL: Solo la fotografía artística elegida */
+.cara-frente {
+  background-color: #f0f0f0;
+  z-index: 2; /* Asegura que inicie al frente */
+  transform: rotateY(0deg);
+}
+
+.cara-frente img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la foto perfectamente al contenedor sin deformarla */
+}
+
+/* 6. CARA TRASERA: El fondo de color + la frase con color inteligente */
+.cara-atras {
+  background-color: #ffffff;
+  transform: rotateY(180deg); /* Inicia volteada para que se descubra al girar */
+}
+
+.cara-atras #render-fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* El fondo cubre toda la cara trasera */
+}
+
+/* 7. Contenedor absoluto para superponer la frase encima del fondo */
+.render-texto-contenedor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; /* Centra la frase verticalmente */
+  justify-content: center; /* Centra la frase horizontalmente */
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.05); /* Capa casi invisible para unificar el contraste */
+}
+
+/* 8. La imagen (.png transparente) de la frase seleccionada */
+#render-frase-img {
+  width: auto;
+  max-width: 85%; /* Evita que la frase toque los bordes de la postal */
+  max-height: 75%;
+  object-fit: contain; /* Mantiene la proporción de tu caligrafía o diseño */
+  filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.15)); /* Le da un sutil relieve a la frase */
+}
+
+/* Estilos de apoyo para la selección visual en tu menú superior */
+.postal-elegible, .frase-elegible {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.seleccionado {
+  outline: 5px solid var(--verde-oliva-medio, #5c6e58);
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }

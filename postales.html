@@ -102,7 +102,7 @@
                <h2 class="centrado" id="xresponsive">Hagamos de la plaza nuestro lugar.<br>Veámosla desde los ojos de quienes ya la habitan.</h2>
             </section>
         </div>
-        <p>Las imágenes que habitan este espacio nacen de quienes recorren la plaza y la observan desde su propia experiencia.<br>Son miradas compartidas por visitantes y habitantes que, a través de la fotografía, capturan fragmentos<br>de lo cotidiano: momentos, detalles y encuentros que también construyen memoria.<br><br><br>Aquí puedes tomar esas imágenes y crear tu propia postal, componiendo una nueva forma de ver la plaza. <br>Más que una imagen, cada postal es una manera de habitarla, de interpretarla y de hacerla parte de tu propia experiencia.
+        <p>Las imágenes que habitan este espacio nacen de quienes recorren la plaza y la observan desde su propia experiencia.<br>Son miradas compartidas por visitantes y habitantes que, a través de la fotografía, capturan fragmentos<br>de lo cotidiano: momentos, detalles y encuentros que también construyen memoria.
         </p>
     </div>
     <div class="container-parallax-carros">
@@ -129,12 +129,12 @@
                     </div>
                 </div> 
                 <div class="txt-principal-intro">
-                    <h1>POSTAL</h1>
+                    <h1 class="titulo-postal">POSTAL</h1>
                 </div> 
             </div>
             
             <div class="linea-vertical-footer"></div>
-            <p>Elige una imagen, un fondo y un pregón que le den forma a tu mirada de la plaza.</p>
+            <p>Más que una imagen, cada postal es una manera de habitarla,<br>de interpretarla y de hacerla parte de tu propia experiencia.<br><br>Elige una imagen, un fondo y un pregón que le den forma a tu mirada de la plaza.</p>
         </div>
         <div class="titulo-secundario" id="xpc">
             <div class="titulo-principal-postales">
@@ -148,7 +148,7 @@
                     </div>
                 </div> 
                 <div class="txt-principal-intro">
-                    <h1>POSTAL</h1>
+                    <h1 class="titulo-postal">POSTAL</h1>
                 </div> 
             </div>
             <div class="subtitulo-lineas">
@@ -160,42 +160,45 @@
         </div>
         <div class="text-intro" id="xpc">
              <p>
-               Elige una imagen, un fondo y un pregón que le den forma a tu mirada de la plaza
+               Elige una imagen, un fondo y una frase<br>que le den forma a tu mirada de la plaza
             </p>
         </div>
         <div class="opciones-postales">
-            <div class="opcion">
+            <div class="opcion" id="grupo-fotos">
                 <div>
-                    <img src="IMG/OPCION1.png" alt="">
-                    <img src="IMG/OPCION1.png" alt="">
+                    <img src="IMG/Foto-postal1.webp" data-img="IMG/Foto-postal1.webp" alt="Foto 1" class="postal-elegible">
+                    <img src="IMG/Foto-postal2.webp" data-img="IMG/Foto-postal2.webp" alt="Foto 2" class="postal-elegible">
                 </div>
                 <div>
-                    <img src="IMG/OPCION1.png" alt="">
-                    <img src="IMG/OPCION1.png" alt="">
+                    <img src="IMG/Foto-postal3.webp" data-img="IMG/Foto-postal3.webp" alt="Foto 3" class="postal-elegible">
+                    <img src="IMG/Foto-postal4.webp" data-img="IMG/Foto-postal4.webp" alt="Foto 4" class="postal-elegible">
                 </div>
             </div>
-            <div class="opcion">
+            <div class="opcion" id="grupo-fondos">
                 <div>
-                    <img src="IMG/OPCION1.png" alt="">
-                    <img src="IMG/OPCION1.png" alt="">
+                    <img src="IMG/Postal-Fondo1.webp" data-id="fondo1" data-fondo="IMG/Postal-Fondo1.webp" alt="Fondo 1" class="postal-elegible">
+                    <img src="IMG/Postal-Fondo2.webp" data-id="fondo2" data-fondo="IMG/Postal-Fondo2.webp" alt="Fondo 2" class="postal-elegible">
                 </div>
                 <div>
-                    <img src="IMG/OPCION1.png" alt="">
-                    <img src="IMG/OPCION1.png" alt="">
+                    <img src="IMG/Postal-Fondo4.webp" data-id="fondo4" data-fondo="IMG/Postal-Fondo4.webp" alt="Fondo 4" class="postal-elegible">
+                    <img src="IMG/Postal-Fondo3.webp" data-id="fondo3" data-fondo="IMG/Postal-Fondo3.webp" alt="Fondo 3" class="postal-elegible">
                 </div>
             </div>
         </div>
+
         <div class="frases-postales">
-            <div> <p>Somos una familia</p></div>
-            <div> <p>Sembremos unión</p></div>
-            <div> <p>Habitemos juntos</p></div>
+            <div class="frase-elegible" data-id="frase1"> <h2>SEmbremos unión</h2></div>
+            <div class="frase-elegible" data-id="frase2"> <h2>Somos una familia</h2></div>
+            <div class="frase-elegible" data-id="frase3"> <h2>Habitemos juntos</h2></div>
         </div>
-        <a href="mapamemoria.html" class="boton">
+        <!-- CÓDIGO NUEVO Y CORREGIDO -->
+        <button type="button" id="btn-crear-postal" class="boton">
             <img src="IMG/FLOR.png" alt="flor" width="100px">
             <div class="txt-boton">
                 <span>Crear postal</span>
             </div>
-        </a>
+        </button>
+
     </section>
      <div class="hero-container">
             
@@ -207,9 +210,27 @@
         </div>
         <div class="hero">
             <section class="intro">
-                <div>
-                    <img src="IMG/Postal.png" alt="Lpostal">
+                <!-- ESTA ES LA ESTRUCTURA 3D DE LA POSTAL DE DOS LADOS -->
+                <div class="contenedor-resultado-postal">
+                    <div class="postal-3d" id="postal-final">
+
+                        <!-- CARA FRONTAL: Solo la fotografía que eligió el usuario -->
+                        <div class="cara cara-frente">
+                            <img id="render-foto" src="" alt="Portada de la Postal">
+                        </div>
+
+                        <!-- CARA TRASERA: El fondo seleccionado + la frase con el color inteligente asignado por JS -->
+                        <div class="cara cara-atras">
+                            <img id="render-fondo" src="" alt="Fondo Trasero">
+                            <div class="render-texto-contenedor">
+                                <!-- Imagen transparente (.png) de la frase seleccionada en su color óptimo -->
+                                <img id="render-frase-img" src="" alt="Frase de la Postal">
+                            </div>
+                        </div>
+                    
+                    </div>
                 </div>
+
             </section>
         </div>
     </div>
