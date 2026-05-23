@@ -1494,3 +1494,83 @@ video{
   will-change: transform;
 }
 
+/*interna postales*/
+
+.txt-rotado-vertical-intro-postal{
+  position: absolute;
+  transform: rotate(-90deg);
+  left: 67px;
+  top: 31%;
+  transform-origin: center;
+}
+.texto-apoyo-vertical-derecha-postales {
+    position: absolute;
+    top: 95rem;
+    right: 3rem;
+    transform: rotate(90deg);
+    transform-origin: top right;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-container-interna-postales{
+  background-image: url(IMG/Fondo2.png);
+   position: relative;
+  overflow: hidden;
+  height: 140vh;
+}
+.foto-intro-postales{
+  background-image: url(IMG/Foto-intro-postales.jpg);
+  background-size: cover;
+  border-radius: var(--borde-m);
+  transform: scaleX(-1);
+    position: absolute;
+   right: 9rem;
+    top: 4rem;
+    width: 81%;
+    height: 59%;
+    z-index: 1;
+}
+.hero-container-interna-postales p{
+  margin: 13rem 17rem;
+  text-align: center;
+}
+.intro-interna-postales{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10.1rem;
+  gap: 4rem;
+  margin-left: -32rem;
+}
+.capa-carros-postales{
+  display: none;
+  position: absolute;
+  inset: 0;
+  bottom: -50%; 
+  background-image: url(img/Parallax-carros-postales.jpg);
+  background-size: 132%;
+  background-position: 31% 68%;
+  background-repeat: no-repeat;
+  z-index: 10;
+  will-change: transform;
+}
+.titulo-principal-postales{
+  display: flex;
+  flex-direction: column;
+  gap: -2rem;
+}
+.txt-apoyo-intro-postales {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(-17px);
+    margin-left: 7%;
+    margin-bottom: -14%;
+
+}
