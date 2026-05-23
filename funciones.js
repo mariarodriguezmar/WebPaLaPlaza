@@ -35,6 +35,11 @@ const parallaxLayers = [
   { selector: ".capam2", speed: 0.23 },
   { selector: ".capam3", speed: 0.28 },
   { selector: ".capam4", speed: 0.40 },
+  
+  { selector: ".capaA1", speed: 0.08 },
+  { selector: ".capaA2", speed: 0.23 },
+  { selector: ".capaA3", speed: 0.28 },
+  { selector: ".capaA4", speed: 0.40 },
 ];
 
 const parallaxTargets = parallaxLayers.map(layer => ({
@@ -45,6 +50,7 @@ const parallaxTargets = parallaxLayers.map(layer => ({
 const capaCta = document.querySelector(".capa-cta");
 const capaCtaWebsodios = document.querySelector(".capa-cta-websodios");
 const capaCtaMapa = document.querySelector(".capa-cta-mapa");
+const capaCtaArchivo = document.querySelector(".capa-cta-archivo");
 
 let latestScroll = 0;
 let ticking = false;
@@ -74,7 +80,9 @@ function updateParallax() {
   if (capaCtaMapa) {
     capaCtaMapa.style.transform = `translate3d(0, -${latestScroll * 0.16}px, 0)`;
   }
-
+  if (capaCtaArchivo) {
+    capaCtaArchivo.style.transform = `translate3d(0, -${latestScroll * 0.16}px, 0)`;
+  }
   ticking = false;
 }
 
