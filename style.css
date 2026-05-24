@@ -302,6 +302,7 @@ header.abierto {
   align-items: center;
   justify-content: center;
   background-image: url(IMG/FONDO-INTRO.png);
+  border-radius:0 0 0 var(--borde-m) ;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -425,12 +426,12 @@ header.abierto {
   justify-content: center; 
   position: absolute;
   left: 0;
-  top: 26%;
+  top: 31%;
   background-color: rgba(100, 110, 53, 0.56);
   width: 60%;
-  height: 8%;
+  height: 12%;
   border-radius: 0  var(--borde-m) var(--borde-m) 0;
-  z-index: 10;
+  z-index: 50;
 }
 .frase span{
   font-family: var(--fuente-titulos);
@@ -1515,7 +1516,9 @@ video{
     align-items: center;
 }
 .hero-container-interna-postales{
-  background-image: url(IMG/Fondo2.png);
+  background-image: url(IMG/Fondo-oscuro-patron-lateral.webp);
+  background-size: 110%;
+ background-position: 0% 50%;
    position: relative;
   overflow: hidden;
   height: 120vh;
@@ -1567,6 +1570,7 @@ video{
   display: flex;
   flex-direction: column;
   gap: -2rem;
+
 }
 .txt-apoyo-intro-postales {
     position: relative;
@@ -1580,7 +1584,7 @@ video{
 
 }
 .selector-postales{
-  height: 129vh;
+  height: 115vh;
   background-image: url(IMG/FONDOMENÚ.png);
   background-size: 129%;
   background-repeat: no-repeat;
@@ -1590,8 +1594,9 @@ video{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   margin: 3rem;
+  margin-top: 6rem;
 }
 .opcion{
   display: flex;
@@ -1627,7 +1632,7 @@ video{
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin: 1rem 13rem;
+  margin: 1rem 12rem;
   margin-bottom: 6rem;
   height: 3rem;
 }
@@ -1638,10 +1643,13 @@ video{
   font-size: 6.5rem;
 }
 #btn-crear-postal {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
+    position: relative;
+    z-index: 10;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    right: -31rem;
 }
 /*dieseño ecard postal*/
 /* ==========================================================================
@@ -1650,12 +1658,12 @@ video{
 
 /* 1. El contenedor principal que controla la visibilidad y perspectiva 3D */
 .contenedor-resultado-postal {
-  display: none; /* 🔥 Clave: Oculta la sección por completo al inicio */
-  perspective: 1500px; /* Brinda profundidad realista al giro 3D */
-  width: 550px; /* Ancho de la postal (puedes ajustarlo a tu diseño) */
-  height: 380px; /* Alto de la postal */
-  margin: 5rem auto; /* Centra la postal en la pantalla y da espacio arriba/abajo */
-  opacity: 0; /* Preparado para una transición suave de aparición */
+  display: none; 
+  perspective: 1500px; 
+  width: 700px;       /* 🚀 Subimos de 550px a 700px (Cámbialo al tamaño que desees) */
+  height: 480px;      /* 🚀 Subimos de 380px a 480px (Proporción postal estándar) */
+  margin: 5rem auto; 
+  opacity: 0; 
   transition: opacity 0.6s ease-in-out;
 }
 
@@ -1687,27 +1695,26 @@ video{
   width: 100%;
   height: 100%;
   backface-visibility: hidden; /* Oculta la parte trasera de la capa al girar */
-  border-radius: 12px;
+  border-radius: var(--borde-m); 
   overflow: hidden; /* Evita que las imágenes se salgan de las esquinas redondeadas */
 }
 
 /* 5. CARA FRONTAL: Solo la fotografía artística elegida */
 .cara-frente {
-  background-color: #f0f0f0;
   z-index: 2; /* Asegura que inicie al frente */
   transform: rotateY(0deg);
 }
 
 .cara-frente img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta la foto perfectamente al contenedor sin deformarla */
+  height: 104%;
+  object-fit: cover;   
+  display: block;
 }
 
 /* 6. CARA TRASERA: El fondo de color + la frase con color inteligente */
 .cara-atras {
-  background-color: #ffffff;
-  transform: rotateY(180deg); /* Inicia volteada para que se descubra al girar */
+  transform: rotateY(180deg); 
 }
 
 .cara-atras #render-fondo {
@@ -1719,16 +1726,15 @@ video{
 /* 7. Contenedor absoluto para superponer la frase encima del fondo */
 .render-texto-contenedor {
   position: absolute;
-  top: 0;
+  top: 6rem;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 65%;
+  height: auto;
   display: flex;
-  align-items: center; /* Centra la frase verticalmente */
-  justify-content: center; /* Centra la frase horizontalmente */
-  padding: 2.5rem;
+  align-items: center;      
+  justify-content: flex-start; 
+  padding: 0 3.5rem;        
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.05); /* Capa casi invisible para unificar el contraste */
 }
 
 /* 8. La imagen (.png transparente) de la frase seleccionada */
@@ -1737,7 +1743,6 @@ video{
   max-width: 85%; /* Evita que la frase toque los bordes de la postal */
   max-height: 75%;
   object-fit: contain; /* Mantiene la proporción de tu caligrafía o diseño */
-  filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.15)); /* Le da un sutil relieve a la frase */
 }
 
 /* Estilos de apoyo para la selección visual en tu menú superior */
@@ -1747,7 +1752,84 @@ video{
 }
 
 .seleccionado {
-  outline: 5px solid var(--verde-oliva-medio, #5c6e58);
+  outline: 5px solid var(--verde-oliva-claro);
   transform: scale(1.03);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.txt-apoyo-postales {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(308px);
+    right: -5rem;
+
+}
+.contenedor-guia-postal{
+  background-image: url(IMG/Postal-referencia.jpg);
+  background-size: 150%;
+  background-position: 98% 46%;
+  width: 700px;      
+  height: 480px; 
+  border-radius: var(--borde-m);
+}
+/*parallax postales cajas*/
+.parallax-resultado-postal{
+  position: absolute;
+  inset: 0;
+  height: 120%;
+  z-index: 1;
+}
+.capap{
+  position: absolute;
+  left: -10;
+  width: 100%;
+  height: 121%;
+  background-size: 100%;
+  background-position: 0% -13%;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+.capap1{
+  background-image: url(IMG/parallax-postales.jpg);
+  z-index: 1;
+}
+.capap2{
+  background-image: url(IMG/parallax-postales2.png);
+  z-index: 2;
+}
+.capap3{
+  background-image: url(IMG/parallax-postales3.png);
+  z-index: 3;
+}
+.capap4{
+  background-image: url(IMG/parallax-postales4.png);
+  z-index: 4;
+}
+
+
+.CTA-cierre {
+  position: relative;
+  z-index: 50;
+  right: -5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(IMG/FONO-CTA.png);
+    border-radius: 2rem;
+    background-size: cover;
+    width: 90%;
+    height: 52.5vh;
+    margin-top: 20%;
+    z-index: 10;
+    background-position-y: 87%;
+}
+.CTA-cierre p{
+  margin: 0rem 10rem 1.5rem;
+  text-align: center;
+}
+.txt-crea-postal{
+  transform: translateY(-1rem);
 }

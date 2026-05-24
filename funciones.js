@@ -40,6 +40,11 @@ const parallaxLayers = [
   { selector: ".capaA2", speed: 0.23 },
   { selector: ".capaA3", speed: 0.28 },
   { selector: ".capaA4", speed: 0.40 },
+
+  { selector: ".capap1", speed: 0.08 },
+  { selector: ".capap2", speed: 0.23 },
+  { selector: ".capap3", speed: 0.28 },
+  { selector: ".capap4", speed: 0.40 },
 ];
 
 const parallaxTargets = parallaxLayers.map(layer => ({
@@ -193,19 +198,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 fondo1: "IMG/Frase-postal-a1.webp",
                 fondo2: "IMG/Frase-postal-v1.webp",
                 fondo3: "IMG/Frase-postal-b1.webp",
-                fondo4: "IMG/Frase-postal-a1.webp" 
+                fondo4: "IMG/Frase-postal-v1.webp" 
             },
             frase2: {
                 fondo1: "IMG/Frase-postal-a2.webp",
                 fondo2: "IMG/Frase-postal-v2.webp",
                 fondo3: "IMG/Frase-postal-b2.webp",
-                fondo4: "IMG/Frase-postal-a2.webp"
+                fondo4: "IMG/Frase-postal-v2.webp"
             },
             frase3: {
                 fondo1: "IMG/Frase-postal-a3.webp",
                 fondo2: "IMG/Frase-postal-v3.webp",
                 fondo3: "IMG/Frase-postal-b3.webp",
-                fondo4: "IMG/Frase-postal-a3.webp"
+                fondo4: "IMG/Frase-postal-v3.webp"
             }
         };
 
@@ -217,10 +222,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('render-fondo').src = rutaFondoCara2;         
         document.getElementById('render-frase-img').src = rutaFraseCorrectaCara2; 
 
-        // 5. Gestión de visibilidad y scroll dinámico
+        const guia = document.getElementById('postal-guia');
         const contenedorResultado = document.querySelector('.contenedor-resultado-postal');
         
-        // Rompemos el display: none
+        // Escondemos por completo la imagen que dice "Aquí tu postal"
+        if (guia) {
+            guia.style.display = 'none';
+        }
+
+        // Rompemos el display: none de la postal real armada
         contenedorResultado.style.display = 'block';
 
         // Disparamos la opacidad fluida de tu CSS unificado
