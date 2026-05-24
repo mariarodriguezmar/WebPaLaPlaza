@@ -135,6 +135,7 @@ h6{
   overflow: hidden;
 }
 .capa{
+     filter: brightness(55%);  
     position: absolute;
     top: 0;
     min-height: 85vh;
@@ -538,6 +539,7 @@ video{
 }
 .capam{
     position: absolute;
+    filter: brightness(50%);
     top: 0;
     height: cover;
     width: 100%;
@@ -651,6 +653,7 @@ video{
 }
 .capaArchivo{
     position: absolute;
+    filter: brightness(49%);
     top: 0;
     height: cover;
     width: 100%;
@@ -671,4 +674,230 @@ video{
     background-position: 75% 60%;
     overflow: hidden;
 }
+/*interna postales*/
+.txt-rotado-vertical-intro-postal{
+  position: absolute;
+  transform: rotate(-90deg);
+  left: 14px;
+  top: 27%;
+  transform-origin: center;
+}
+
+.txt-apoyo-intro-postales{
+  gap: 0.5rem;
+  transform: translateY(1rem);
+  margin-left: -0.2rem;
+  margin-bottom: 0%;
+}
+.titulo-principal-postales{
+  display: flex;
+  flex-direction: column;
+
+}
+/*internas postales*/
+.hero-container-interna-postales{
+background-repeat: no-repeat;
+  background-size: 550%;
+ background-position: 5% 10%;
+   position: relative;
+  overflow: hidden;
+  height: 58rem;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+.foto-intro-postales{
+  background-image: url(IMG/Foto-intro-postales.jpg) ;
+  filter: brightness(50%);
+  
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: 100% -4%;
+  position: absolute;
+  right: -2rem;
+  width: 22rem;
+  height: 100rem;
+  top: -1rem;
+  overflow: hidden;
+}
+.intro-interna-postales{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14.5rem;
+  gap: 4rem;
+  margin-left: 0rem;
+  overflow: hidden;
+}
+.intro-interna-postales h2{
+  margin-top: -3rem;
+  gap: 4rem;
+  margin-left: 0rem;
+}
+.hero-container-interna-postales p {
+  text-align: justify;
+  margin: 20rem 1.5rem;  
+}
+.container-parallax-carros {
+    position: relative;
+    overflow: hidden;
+    height: 25rem;
+}
+.capa-carros-postales {
+  top: -5rem;
+    bottom: -10rem;
+    background-size: 300%;
+    background-position: 100%;
+    overflow: hidden;
+    height: 50rem;
+}
+.selector-postales{
+  height: 58.5rem;
+  background-image: url(IMG/FONDOMENÚ.png);
+  background-size: 900%;
+  background-position-y: -1rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.opciones-postales{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+.opcion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.opcion img{
+  width: 120px;
+  height: auto;
+  border-radius: var(--borde-s);
+}
+.opcion div{
+  gap: 0.5rem;
+  display:flex;
+  flex-direction: row;
+}
+.frases-postales div{
+  background-color: var(--verde-oliva-medio);
+  border-radius: var(--borde-s);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.frases-postales{
+  position: relative;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+  margin-bottom: 6rem;
+  height: 8rem;
+  width:16rem ;
+}
+#btn-crear-postal {
+    position: relative;
+    z-index: 10;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    top: 3rem;
+    right: -2.5rem;
+}
+.contenedor-resultado-postal {
+  display: none; 
+  perspective: 1500px; 
+  transform: translateY(-1rem);
+  width: 16rem;       /* 🚀 Subimos de 550px a 700px (Cámbialo al tamaño que desees) */
+  height: 16rem;      /* 🚀 Subimos de 380px a 480px (Proporción postal estándar) */
+  margin: 5rem auto; 
+  opacity: 0; 
+  transition: opacity 0.6s ease-in-out;
+}
+
+.contenedor-guia-postal{
+  background-image: url(IMG/Postal-referencia.jpg);
+  transform: translateY(-1rem);
+  background-size: 250%;
+  background-position: 80% 72%;
+  width: 16rem;      
+  height: 14rem; 
+  border-radius: var(--borde-m);
+}
+.txt-apoyo-postales {
+    position: relative;
+    display: flex;
+    flex-direction: colum;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(6rem);
+    right: -1rem;
+
+}
+.intro{
+  border-radius: 0;
+}
+.parallax-resultado-postal{
+  position: absolute;
+  inset: 0;
+  height: 90rem;
+  z-index: 1;
+}
+.capap{
+  position: absolute;
+  top: 4rem;
+  left: -10;
+  width: 100%;
+  height: 121%;
+  background-size: 300%;
+  background-position: 0% -13%;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+.CTA-cierre{ 
+    background-image: url(IMG/FONO-CTA.png);
+    border-radius: 1rem;
+    background-size: 150%;
+    width: 85%;
+    height: 16vh;
+    margin-top: 8rem;
+    z-index: 10;
+    margin-bottom: 8rem;
+    transform: translateX(-3.7rem);
+}
+.txt-apoyo-intro-postales{
+
+}
+.render-texto-contenedor {
+  position: absolute;
+  top: 2.5rem;
+  left: -1.5rem;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;      
+  justify-content: flex-start; 
+  padding: 0 3.5rem;        
+  box-sizing: border-box;
+}
+
+
+
 }
