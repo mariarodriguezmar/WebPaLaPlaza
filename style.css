@@ -1323,9 +1323,10 @@ video{
 }
 @media (any-hover: hover) and (any-pointer: fine) {
   .info-foto-mapa {
-    transform: translateY(62%);
+    transform: translateY(35%);
     transition: transform 400ms ease-out;
     transition-delay: 500ms;
+    padding: 0.25rem 0rem;
   }
  
   .card__background {

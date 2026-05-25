@@ -397,7 +397,7 @@ transform: translateX(-0.7rem);
 
 }
 .intro-internaw {
-  margin-top: 9rem;
+  margin-top: 14rem;
   gap: 1rem;
   transform:translateX(0%);
   overflow: hidden;
@@ -463,7 +463,7 @@ transform: translateX(-0.7rem);
   margin-left: 1rem;
 }
 .episodio{
-    height: auto;
+    height: 10rem;
     width: 100%;
   flex: 0 0 100%;
 }
@@ -609,6 +609,24 @@ video{
   top: 12rem;
   left: 31.5rem;
 }
+.card {
+    display: flex;
+    place-items: center;
+    background-image: url(IMG/Fondo2.png);
+    width: 360px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: var(--borde-m);
+    position: relative;
+    top: 1.5rem;
+    right: -13.8rem;
+    justify-content: center;
+}
+.comando-clic{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
 .convenciones-1 img{
   width: 20px;
 }
@@ -631,7 +649,7 @@ video{
 /*archivo vivo*/
 .contenido-archivovivo{
   top: -20rem;
-  height: 47rem;
+  height: 40rem;
   background-size: 455%;
   overflow: hidden;
   background-position-y: 1rem;
@@ -697,11 +715,11 @@ video{
 /*internas postales*/
 .hero-container-interna-postales{
 background-repeat: no-repeat;
-  background-size: 550%;
+  background-size: 560%;
  background-position: 5% 10%;
    position: relative;
   overflow: hidden;
-  height: 58rem;
+  height: 60rem;
   width: 100%;
   overflow: hidden;
   z-index: 100;
@@ -711,12 +729,12 @@ background-repeat: no-repeat;
   filter: brightness(50%);
   
   background-repeat: no-repeat;
-  background-size: 300%;
+  background-size: 380%;
   background-position: 100% -4%;
   position: absolute;
-  right: -2rem;
-  width: 22rem;
-  height: 100rem;
+  right: 0rem;
+  width: 100%;
+  height: 190rem;
   top: -1rem;
   overflow: hidden;
 }
@@ -737,7 +755,7 @@ background-repeat: no-repeat;
 }
 .hero-container-interna-postales p {
   text-align: justify;
-  margin: 20rem 1.5rem;  
+  margin: 23rem 1.5rem;  
 }
 .container-parallax-carros {
     position: relative;
@@ -753,7 +771,7 @@ background-repeat: no-repeat;
     height: 50rem;
 }
 .selector-postales{
-  height: 58.5rem;
+  height: 62.5rem;
   background-image: url(IMG/FONDOMENÚ.png);
   background-size: 900%;
   background-position-y: -1rem;
@@ -777,7 +795,7 @@ background-repeat: no-repeat;
   gap: 0.5rem;
 }
 .opcion img{
-  width: 120px;
+  width: 155px;
   height: auto;
   border-radius: var(--borde-s);
 }
@@ -808,7 +826,6 @@ background-repeat: no-repeat;
   margin: 1rem;
   margin-bottom: 6rem;
   height: 8rem;
-  width:16rem ;
 }
 #btn-crear-postal {
     position: relative;
@@ -818,7 +835,7 @@ background-repeat: no-repeat;
     cursor: pointer;
     padding: 0;
     top: 3rem;
-    right: -2.5rem;
+    right: -5.5rem;
 }
 .contenedor-resultado-postal {
   display: none; 
