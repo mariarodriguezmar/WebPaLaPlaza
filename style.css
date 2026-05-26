@@ -560,7 +560,7 @@ header.abierto {
   align-items: baseline;
   flex-direction: row;
   background-color: var(--verde-oliva-oscuro);
-  width: 55vh;
+  width: 56vh;
   height: 60%;
   border-radius: 0  var(--borde-m) var(--borde-m) 0;
 }
@@ -596,6 +596,20 @@ header.abierto {
   font-size: var(--tamaño-botones);
   color: var(--color-texto-frases);
 
+}
+.postal-elegible, 
+.frases-elegible {
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+ 
+  cursor: pointer;         
+  overflow: hidden;
+  transform-origin: center;  
+}
+.postal-elegible:hover, 
+.frase-elegible:hover {
+  transform: scale(1.04); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
 }
 
 /*Diseño footer*/
@@ -988,6 +1002,7 @@ video{
 .capaw4{
   background-image: url(IMG/Persona.png);
   z-index: 4;
+  height: 140%;
 }
 
 /*parallax cta*/
@@ -1610,7 +1625,7 @@ video{
 .container-parallax-carros{
   position: relative;
   overflow: hidden;
-  height: 120vh;
+  height: 125vh;
 }
 
 .capa-carros-postales {
@@ -1619,7 +1634,7 @@ video{
    inset: 0;
    bottom: -32%;
    background-image: url(img/Parallax-carros-postales.jpg);
-   background-size: 115%;
+   background-size: 119%;
    background-position: 0% 256%;
    background-repeat: no-repeat;
    z-index: 10;
