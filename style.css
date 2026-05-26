@@ -1341,6 +1341,19 @@ video{
   
   transform: translateY(100%);
   transition: transform 500ms ease-out;
+  background: linear-gradient(
+     /*180deg,
+    rgba(56, 63, 31, 0) 0%,
+    rgba(56, 63, 31, 0.35) 30%,
+    rgba(56, 63, 31, 0.85) 80%,
+    #383f1f 100%*/
+    
+   180deg,
+  rgba(56, 63, 31, 0.00) 0%,
+  rgba(56, 63, 31, 0.78) 30%,
+  rgba(24, 27, 15, 0.96) 68%,
+  #14180f 100%
+  );
 }
 
 /* ensure cards only capture pointer when visible */
@@ -1369,19 +1382,7 @@ video{
     align-items: center;
     gap: 3rem;
     padding: 12rem 2rem 0rem 2rem;
-    background: linear-gradient(
-     /*180deg,
-    rgba(56, 63, 31, 0) 0%,
-    rgba(56, 63, 31, 0.35) 30%,
-    rgba(56, 63, 31, 0.85) 80%,
-    #383f1f 100%*/
     
-   180deg,
-  rgba(56, 63, 31, 0.08) 0%,
-  rgba(56, 63, 31, 0.78) 30%,
-  rgba(24, 27, 15, 0.96) 68%,
-  #14180f 100%
-  );
   background-position: 100% 10%;
     
 }

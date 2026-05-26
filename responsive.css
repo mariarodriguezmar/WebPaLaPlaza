@@ -156,12 +156,12 @@ h6{
     text-align: center;
 }
 .intro {
-    background-size: 300%;
+    background-size: 143%;
     background-repeat: no-repeat;
     background-position: 25% 0%;
     position: relative;
     width: 100%;
-    padding-top: 6rem;
+    padding-top: 3rem;
     height: 26rem;
     top: 1.8rem;
     gap: 1rem;
@@ -171,6 +171,7 @@ h6{
 
 .text-intro {
     padding: 1rem 3rem;
+    top: 2rem;
 }
 .text-historia {
     padding: 1rem 2rem;
@@ -447,8 +448,10 @@ transform: translateX(-0.7rem);
   font-size: 1.5rem;
 }
 iframe{
-  width: 15rem;
-  height: 8rem;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 .websodios{
     background-repeat: no-repeat;
@@ -478,9 +481,11 @@ iframe{
   margin-left: 1rem;
 }
 .episodio{
-    height: 8rem;
+    height: auto;
     width: 100%;
   flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
 }
 video{
   display:flex;
@@ -532,7 +537,7 @@ video{
 }
 .capa-cta-websodios {
   height: cover;
-  background-size: 300%;
+  background-size: 400%;
   z-index: 1;
   will-change: transform;
   top: -18rem;
@@ -662,8 +667,26 @@ video{
     overflow: hidden;
 }
 .info-foto-mapa-contenedor {
-    gap: 2rem;
+    gap: 2rem;  
+    width: 100%;
+  height: 80%;
+  gap: 2rem;
+    padding: 0rem;
+     background-position: 100% 80%;
   
+}
+.info-foto-mapa{
+  position: absolute;
+  inset: auto 0 0 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.25rem 1rem;
+  
+  transform: translateY(100%);
+  transition: transform 500ms ease-out;
 }
 
 /*archivo vivo*/
@@ -747,14 +770,14 @@ background-repeat: no-repeat;
 .foto-intro-postales{
   background-image: url(IMG/Foto-intro-postales.jpg) ;
   filter: brightness(50%);
-  
+  border-radius: 0;
   background-repeat: no-repeat;
   background-size: 380%;
   background-position: 100% -4%;
   position: absolute;
   right: 0rem;
   width: 100%;
-  height: 190rem;
+  height: 42rem;
   top: -1rem;
   overflow: hidden;
 }
@@ -861,20 +884,20 @@ background-repeat: no-repeat;
   display: none; 
   perspective: 1500px; 
   transform: translateY(-1rem);
-  width: 16rem;       /* 🚀 Subimos de 550px a 700px (Cámbialo al tamaño que desees) */
-  height: 16rem;      /* 🚀 Subimos de 380px a 480px (Proporción postal estándar) */
-  margin: 5rem auto; 
+  width: 21.5rem;       /* 🚀 Subimos de 550px a 700px (Cámbialo al tamaño que desees) */
+  height: 15rem;      /* 🚀 Subimos de 380px a 480px (Proporción postal estándar) */
+  margin: 1rem auto; 
   opacity: 0; 
   transition: opacity 0.6s ease-in-out;
 }
 
 .contenedor-guia-postal{
   background-image: url(IMG/Postal-referencia.jpg);
-  transform: translateY(-1rem);
+  transform: translateY(0rem);
   background-size: 250%;
   background-position: 80% 72%;
-  width: 16rem;      
-  height: 14rem; 
+  width: 20rem;      
+  height: 17rem; 
   border-radius: var(--borde-m);
 }
 .txt-apoyo-postales {
@@ -917,7 +940,7 @@ background-repeat: no-repeat;
     margin-top: 8rem;
     z-index: 10;
     margin-bottom: 8rem;
-    transform: translateX(-3.7rem);
+    transform: translateX(-3rem);
 }
 .txt-apoyo-intro-postales{
 
