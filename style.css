@@ -848,6 +848,13 @@ style-interna webssodios*/
 }
 
 /* contenido websodios*/
+iframe{
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
 .websodios{
   display: flex;
   flex-direction: column;
