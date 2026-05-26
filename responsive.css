@@ -305,15 +305,26 @@ h6{
   transform: translatex(-0.5rem);
 }
 .boton {
-    transform: translateY(-4.7rem);
     text-decoration: none;
+     transform: translateY(-4.7rem) scale(1); 
+}
+.boton:hover {
+  transform: translateY(-4.7rem) scale(1.08);
+  filter: brightness(1.08);
 }
 .boton img{
   height: 50px;
   width: auto;
-  transform: translateX(0.2rem);
+  transform: translateX(0.2rem) rotate(0deg);
   z-index: 99;
+  display: block;
 }
+
+.boton:hover img {
+  transform: translateX(0.2rem) rotate(360deg);
+  transition: transform 1.5s linear; 
+}
+
 .boton span{
   transform: translatex(0.4rem);
   font-size: 1rem;
@@ -435,6 +446,10 @@ transform: translateX(-0.7rem);
 .txt-apoyo-iz-intro h5{
   font-size: 1.5rem;
 }
+iframe{
+  width: 15rem;
+  height: 8rem;
+}
 .websodios{
     background-repeat: no-repeat;
     position: relative;
@@ -463,7 +478,7 @@ transform: translateX(-0.7rem);
   margin-left: 1rem;
 }
 .episodio{
-    height: 10rem;
+    height: 8rem;
     width: 100%;
   flex: 0 0 100%;
 }
@@ -646,6 +661,11 @@ video{
     background-position: 58% 60%;
     overflow: hidden;
 }
+.info-foto-mapa-contenedor {
+    gap: 2rem;
+  
+}
+
 /*archivo vivo*/
 .contenido-archivovivo{
   top: -20rem;
@@ -917,4 +937,10 @@ background-repeat: no-repeat;
 
 
 
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .info-foto-mapa {
+    transform: translateY(35%);
+  }
+}
 }
