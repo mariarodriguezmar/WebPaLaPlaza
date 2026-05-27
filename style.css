@@ -849,7 +849,7 @@ style-interna webssodios*/
 
 /* contenido websodios*/
 iframe{
-  z-index: 10;
+  z-index: 8;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -944,7 +944,7 @@ video{
 .info-episodio{
   position: absolute;
   inset: 0;
-
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: center;
